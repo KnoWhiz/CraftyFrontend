@@ -7,11 +7,9 @@ import Contribute from "@/components/Landing Page Components/Contribute";
 
 export default function Home() {
   return (
-    <div className="h-screen">
+    <div className="h-screen w-screen">
       <NavBar />
-      <Demo />
       <Steps />
-      <Features />
       <Contribute />
       <Footer />
     </div>

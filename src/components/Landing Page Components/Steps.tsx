@@ -2,7 +2,7 @@ import React from "react";
 
 const Steps = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-full mt-24 gap-y-20 font-Inter">
+    <div className="flex flex-col justify-center items-center h-full gap-y-20 font-Inter">
       <h1 className="text-title font-semibold">How it Works</h1>
 
       <div className="flex flex-row items-baseline justify-center gap-10 text-main-black">

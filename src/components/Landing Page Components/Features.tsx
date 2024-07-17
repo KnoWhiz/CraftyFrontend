@@ -2,7 +2,7 @@ import React from "react";
 
 const Features = () => {
   return (
-    <div className="flex flex-col justify-start items-center mt-6 gap-y-20 font-Inter">
+    <div className="flex flex-col justify-start items-center gap-y-20 font-Inter">
       <h1 className="text-title font-semibold">Features</h1>
 
       <div className="grid grid-cols-2 grid-rows-4 gap-4 font-medium gap-y-20">

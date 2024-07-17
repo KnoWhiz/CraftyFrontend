@@ -3,7 +3,7 @@ import React from "react";
 const Demo = () => {
   return (
     <div className="h-full font-Inter">
-      <div className="bg-main-blue w-full h-1/2 mt-24 mb-[30rem]">
+      <div className="bg-main-blue w-full h-1/2 mt-24">
         <div className="flex flex-col justify-center items-center">
           <div
             id="demo text"
@@ -24,7 +24,7 @@ const Demo = () => {
           />
           <button
             type="button"
-            className="h-12 w-44 rounded-lg bg-button-blue text-2xl font-medium text-main-white"
+            className="h-12 w-44 rounded-lg bg-button-blue text-2xl font-medium text-main-white mb-24"
           >
             Sign Up
           </button>
