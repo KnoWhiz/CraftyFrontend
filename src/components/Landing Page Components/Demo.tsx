@@ -15,8 +15,8 @@ const Demo = () => {
             id="demo text"
             className="flex flex-col mb-1 mt-20 items-center justify-center text-main-black"
           >
-            <h1 className="text-3xl font-semibold text-main-black">
-              Effortless Video Creation for Educators
+            <h1 className="text-title font-semibold text-main-black">
+              Craft Compelling Courses with Ease
             </h1>
             <h2 className="mb-4 text-2xl font-medium">
               Turn learning objectives into AI-powered videos that empower your
