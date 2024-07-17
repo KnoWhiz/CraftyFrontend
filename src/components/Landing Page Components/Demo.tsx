@@ -1,6 +1,12 @@
+"use client";
+
 import React from "react";
 
 const Demo = () => {
+  const handleSignUp = () => {
+    // handle signup
+  };
+
   return (
     <div className="h-full font-Inter">
       <div className="bg-main-blue w-full h-1/2 mt-24">
@@ -24,6 +30,8 @@ const Demo = () => {
           />
           <button
             type="button"
+            style={{ cursor: "pointer" }}
+            onClick={handleSignUp}
             className="h-12 w-44 rounded-lg bg-button-blue text-2xl font-medium text-main-white mb-24"
           >
             Sign Up

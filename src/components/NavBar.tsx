@@ -18,17 +18,18 @@ const NavBar = () => {
   }, [pathname]);
 
   const handleCrafty = () => {
-    setIsDocumentation(false);
     router.push("/");
   };
 
   const handleDocumentation = () => {
-    setIsDocumentation(true);
     router.push("/documentation");
   };
 
   return (
-    <nav className="font-Inter text-xl fixed top-0 flex flex-row h-24 w-full items-center justify-between bg-main-white text-main-black pl-20 pr-16">
+    <nav
+      className="font-Inter text-xl fixed top-0 flex flex-row h-24 w-full items-center justify-between bg-main-white text-main-black pl-20 pr-16"
+      style={isDocumentation ? { borderBottom: "1px solid black" } : {}}
+    >
       <h1
         style={{ cursor: "pointer" }}
         onClick={handleCrafty}
