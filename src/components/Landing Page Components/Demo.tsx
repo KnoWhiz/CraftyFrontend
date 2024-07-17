@@ -24,7 +24,7 @@ const Demo = () => {
           />
           <button
             type="button"
-            className="h-12 w-44 rounded-lg bg-button-blue text-xl font-medium text-main-white"
+            className="h-12 w-44 rounded-lg bg-button-blue text-2xl font-medium text-main-white"
           >
             Sign Up
           </button>

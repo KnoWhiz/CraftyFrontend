@@ -5,7 +5,7 @@ const Features = () => {
     <div className="flex flex-col justify-start items-center mt-6 gap-y-20 font-Inter">
       <h1 className="text-title font-semibold">Features</h1>
 
-      <div className="grid grid-cols-2 grid-rows-4 gap-4 font-medium gap-y-20 mb-40">
+      <div className="grid grid-cols-2 grid-rows-4 gap-4 font-medium gap-y-20">
         <div id="item1" className="flex flex-col justify-center items-center">
           <div className="w-1/2">
             <h1 className="text-3xl">AI-Powered Content</h1>
