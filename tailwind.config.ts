@@ -13,7 +13,7 @@ const config: Config = {
       base: "1rem",
       lg: "1.125rem",
       xl: "1.25rem",
-      "2xl": "1.4rem",
+      "2xl": "1.5rem",
       "3xl": "1.875rem",
       "4xl": "2.25rem",
       "5xl": "3rem",
@@ -26,6 +26,7 @@ const config: Config = {
         "button-blue": "#3399FF",
         "main-black": "#000000",
         "main-white": "#FFFFFF",
+        "main-green": "#089656",
       },
       fontFamily: {
         Inter: ["Inter", "sans-serif"],

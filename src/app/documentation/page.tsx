@@ -1,14 +1,17 @@
 import NavBar from "@/components/NavBar";
-import Steps from "@/components/Landing Page Components/Steps";
-import Contribute from "@/components/Landing Page Components/Contribute";
 import SideBar from "@/components/Documentation Components/SideBar";
+import Welcome from "@/components/Documentation Components/Welcome";
+import Api from "@/components/Documentation Components/Api";
+import Readme from "@/components/Documentation Components/Readme";
 
 export default function Home() {
   return (
-    <div className="h-screen w-screen">
+    <div>
       <NavBar />
-      <Steps />
-      <Contribute />
+      <SideBar />
+      <Welcome />
+      <Api />
+      <Readme />
     </div>
   );
 }
