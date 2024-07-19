@@ -37,13 +37,15 @@ const NavBar = () => {
       >
         Crafty
       </h1>
-      <h1
-        style={{ cursor: "pointer" }}
-        onClick={handleDocumentation}
-        className={isDocumentation ? "font-semibold" : "font-normal"}
-      >
-        Documentation
-      </h1>
+      <div className="w-40 flex flex-row justify-center items-center">
+        <h1
+          style={{ cursor: "pointer" }}
+          onClick={handleDocumentation}
+          className={isDocumentation ? "font-semibold" : "font-normal"}
+        >
+          Documentation
+        </h1>
+      </div>
     </nav>
   );
 };
