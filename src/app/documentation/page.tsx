@@ -6,7 +6,7 @@ import Readme from "@/components/Documentation Components/Readme";
 
 export default function Home() {
   return (
-    <div>
+    <div className="h-screen">
       <NavBar />
       <SideBar />
       <Welcome />
