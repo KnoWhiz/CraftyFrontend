@@ -27,6 +27,8 @@ const config: Config = {
         "main-black": "#000000",
         "main-white": "#FFFFFF",
         "main-green": "#089656",
+        "line-gray": "#EBEBEB",
+        "comment-gray": "#757575",
       },
       fontFamily: {
         Inter: ["Inter", "sans-serif"],
