@@ -190,6 +190,179 @@ const Cli = () => {
           </ol>
 
           <p className="inline">Here&apos;s how to use each step:</p>
+
+          <div className="flex flex-col w-full gap-y-2">
+            <h4 className="text-2xl">Chapter</h4>
+
+            <p className="inline">
+              You should always start with chapter command to create meta data
+              and chapters for a given learning topic.
+            </p>
+            <DocLine
+              lines={["python Crafty/cli.py step chapter --topic <topic>"]}
+              label=""
+            />
+            <p className="inline">
+              After the first step, each step will prompt you the next step to
+              execute in the console. Please follow the instructions to
+              continue.
+            </p>
+          </div>
+
+          <div className="flex flex-col w-full gap-y-2">
+            <h4 className="text-2xl">Section</h4>
+            <p className="inline">
+              Start from second step, you are going to provide the course_id
+              instead of topic to continue using existing materials.
+            </p>
+            <DocLine
+              lines={[
+                "python Crafty/cli.py step section --course_id <course_id> --sections_per_chapter 20",
+              ]}
+              label=""
+            />
+            <div>
+              <DocLabel label="--sections_per_chapter" />
+              <p className="inline">
+                {" "}
+                is the number of sections you want to create for each chapter.
+                The default value is 20.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col w-full gap-y-2">
+            <h4 className="text-2xl">Note</h4>
+
+            <div>
+              <p className="inline">
+                To generate notes for the sections of a course, use the{" "}
+              </p>
+              <DocLabel label="note" />
+              <p className="inline">
+                {" "}
+                step. Starting from notes step, you must use{" "}
+              </p>
+              <DocLabel label="--chapter" />
+              <p className="inline">
+                {" "}
+                to specify which chapter you want to generate.
+              </p>
+            </div>
+            <DocLine
+              lines={[
+                "python Crafty/cli.py step note --course_id <course_id> --max_note_expansion_words 500 --chapter 0",
+              ]}
+              label=""
+            />
+            <div>
+              <DocLabel label="--max_note_expansion_words" />
+              <p className="inline">
+                {" "}
+                is the maximum number of words to expand the notes. The default
+                value is 500.
+              </p>
+              <br />
+              <DocLabel label="--chapter" />
+              <p className="inline">
+                is the chapter index to generate notes for. The chapter number
+                start from 0. Here is an example of notes generation for a
+                course with 3 chapters
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col w-full gap-y-2">
+            <h4 className="text-2xl">Slide</h4>
+
+            <div>
+              <p className="inline">
+                To create slides for the notes of a course, use the{" "}
+              </p>
+              <DocLabel label="slide" />
+              <p className="inline"> step. </p>
+            </div>
+            <DocLine
+              lines={[
+                "python Crafty/cli.py step slide --course_id <course_id> --slides_template_file 3 --content_slide_pages 30 --chapter 0",
+              ]}
+              label=""
+            />
+            <div className="flex flex-col w-full gap-y-2">
+              <div>
+                <DocLabel label="--slides_template_file" />
+                <p className="inline">
+                  {" "}
+                  is the template file to use for generating slides. The default
+                  value is 3.
+                </p>
+                <br />
+              </div>
+              <div>
+                <DocLabel label="--content_slide_pages" />
+                <p className="inline">
+                  {" "}
+                  is the number of pages to generate for content slides. The
+                  default value is 30.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col w-full gap-y-2">
+            <h4 className="text-2xl">Script</h4>
+
+            <div>
+              <p className="inline">
+                To create scripts for the slides of a course, use the{" "}
+              </p>
+              <DocLabel label="script" />
+              <p className="inline"> step. </p>
+            </div>
+            <DocLine
+              lines={[
+                "python Crafty/cli.py step script --course_id <course_id> --chapter 0",
+              ]}
+              label=""
+            />
+          </div>
+
+          <div className="flex flex-col w-full gap-y-2">
+            <h4 className="text-2xl">Voice</h4>
+
+            <div>
+              <p className="inline">
+                To generate voice for reading the scripts of a course, use the{" "}
+              </p>
+              <DocLabel label="voice" />
+              <p className="inline"> step. </p>
+            </div>
+            <DocLine
+              lines={[
+                "python Crafty/cli.py step voice --course_id <course_id> --chapter 0",
+              ]}
+              label=""
+            />
+          </div>
+
+          <div className="flex flex-col w-full gap-y-2">
+            <h4 className="text-2xl">Video</h4>
+
+            <div>
+              <p className="inline">
+                Finally, to create videos from the voices and slides of a
+                course, use the{" "}
+              </p>
+              <DocLabel label="video" />
+              <p className="inline"> step. </p>
+            </div>
+            <DocLine
+              lines={[
+                "python Crafty/cli.py step video --course_id <course_id> --chapter 0",
+              ]}
+              label=""
+            />
+          </div>
         </div>
       </div>
     </div>
