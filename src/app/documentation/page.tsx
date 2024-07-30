@@ -4,6 +4,7 @@ import Welcome from "@/components/Documentation Components/Welcome";
 import Api from "@/components/Documentation Components/Api";
 import Readme from "@/components/Documentation Components/Readme";
 import Cli from "@/components/Documentation Components/Cli";
+import Footnote from "@/components/Documentation Components/Footnote";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Api />
       <Readme />
       <Cli />
+      <Footnote />
     </div>
   );
 }

@@ -256,19 +256,25 @@ const Cli = () => {
               label=""
             />
             <div>
-              <DocLabel label="--max_note_expansion_words" />
-              <p className="inline">
-                {" "}
-                is the maximum number of words to expand the notes. The default
-                value is 500.
-              </p>
-              <br />
-              <DocLabel label="--chapter" />
-              <p className="inline">
-                is the chapter index to generate notes for. The chapter number
-                start from 0. Here is an example of notes generation for a
-                course with 3 chapters
-              </p>
+              <div className="flex flex-col w-full gap-y-2">
+                <div>
+                  <DocLabel label="--max_note_expansion_words" />
+                  <p className="inline">
+                    {" "}
+                    is the maximum number of words to expand the notes. The
+                    default value is 500.
+                  </p>
+                  <br />
+                </div>
+                <div>
+                  <DocLabel label="--chapter" />
+                  <p className="inline">
+                    is the chapter index to generate notes for. The chapter
+                    number start from 0. Here is an example of notes generation
+                    for a course with 3 chapters
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 

@@ -49,7 +49,7 @@ const Readme = () => {
           <p className="inline"> . Verify the correct path using: </p>
         </div>
 
-        <DocLine lines={[]} label="" />
+        <DocLine lines={["which ffmpeg"]} label="" />
 
         <DocLine
           lines={[
