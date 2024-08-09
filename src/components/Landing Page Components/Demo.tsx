@@ -1,10 +1,14 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import SignUpPopup from "./SignUpPopup";
 
 const Demo = () => {
+  const [showPopup, setShowPopup] = useState<boolean>(false);
+
   const handleSignUp = () => {
-    // handle signup
+    setShowPopup(true);
   };
 
   return (
@@ -38,6 +42,16 @@ const Demo = () => {
           </button>
         </div>
       </div>
+      {showPopup && (
+        <SignUpPopup
+          onClose={() => {
+            setShowPopup(false);
+          }}
+          onSubmit={() => {
+            setShowPopup(false);
+          }}
+        />
+      )}
     </div>
   );
 };
