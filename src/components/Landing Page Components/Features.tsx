@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 const Features = () => {
@@ -17,11 +18,19 @@ const Features = () => {
         </div>
 
         <div id="item2" className="flex flex-col justify-center items-center">
-          <img src="assets/Feature_1.png" alt="feature 1" className="w-3/5" />
+          <img
+            src="assets/illustrations/feature1.png"
+            alt="feature 1"
+            className="w-3/5"
+          />
         </div>
 
         <div id="item3" className="flex flex-col justify-center items-center">
-          <img src="assets/Feature_2.png" alt="feature 2" className="w-3/5" />
+          <img
+            src="assets/illustrations/feature2.png"
+            alt="feature 2"
+            className="w-3/5"
+          />
         </div>
 
         <div id="item4" className="flex flex-col justify-center items-center">
@@ -45,11 +54,19 @@ const Features = () => {
         </div>
 
         <div id="item6" className="flex flex-col justify-center items-center">
-          <img src="assets/Feature_3.png" alt="feature 3" className="w-3/5" />
+          <img
+            src="assets/illustrations/feature3.png"
+            alt="feature 3"
+            className="w-3/5"
+          />
         </div>
 
         <div id="item7" className="flex flex-col justify-center items-center">
-          <img src="assets/Feature_4.png" alt="feature 4" className="w-3/5" />
+          <img
+            src="assets/illustrations/feature4.png"
+            alt="feature 4"
+            className="w-3/5"
+          />
         </div>
 
         <div id="item8" className="flex flex-col justify-center items-center">
