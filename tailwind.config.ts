@@ -24,7 +24,7 @@ const config: Config = {
     extend: {
       colors: {
         "main-blue": "#AACCFF",
-        "button-blue": "#3399FF",
+        "button-blue": "#0C58D3",
         "main-black": "#000000",
         "main-white": "#FFFFFF",
         "main-green": "#089656",

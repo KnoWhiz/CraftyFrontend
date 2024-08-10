@@ -29,13 +29,7 @@ const Introduction = () => {
           alt="Placeholder"
           className="mt-3 w-4/5 mb-16"
         />
-        <RoundButton
-          text="Sign Up"
-          color="blue"
-          click={() => {
-            setShowPopup(true);
-          }}
-        />
+        <RoundButton text="Sign Up" color="blue" click={handleSignUp} />
       </div>
 
       {showPopup && (
