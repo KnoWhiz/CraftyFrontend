@@ -5,7 +5,7 @@ import DocLabel from "./DocLabel";
 const Readme = () => {
   return (
     <div id="readme" className="pl-60 py-24">
-      <div className="flex flex-col justify-center items-start h-1/3 w-5/6 gap-y-6 font-Inter">
+      <div className="flex flex-col justify-center items-start h-1/3 w-5/6 gap-y-6 font-raleway">
         <h1 className="text-title font-semibold">ReadMe</h1>
 
         <h2 className="text-3xl text-main-green font-normal leading-tight">

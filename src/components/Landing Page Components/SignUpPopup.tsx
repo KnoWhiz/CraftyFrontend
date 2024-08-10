@@ -1,4 +1,5 @@
 import React from "react";
+import RoundButton from "../RoundButton";
 
 interface SignUpPopupProps {
   onSubmit: () => void;
@@ -8,7 +9,7 @@ interface SignUpPopupProps {
 const SignUpPopup: React.FC<SignUpPopupProps> = ({ onSubmit, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="relative flex h-[26rem] w-[50rem] flex-col gap-y-10 py-10 items-center justify-center bg-white font-Inter">
+      <div className="relative flex h-[26rem] w-[50rem] flex-col gap-y-10 py-10 items-center justify-center bg-white font-raleway">
         <div className="absolute top-6 left-6">
           <svg
             width="21"
@@ -35,14 +36,7 @@ const SignUpPopup: React.FC<SignUpPopupProps> = ({ onSubmit, onClose }) => {
           className="w-2/3 rounded-xl h-14 bg-main-gray px-6 placeholder:text-black text-black placeholder:font-light font-light placeholder:text-xl text-xl"
           placeholder="Email"
         />
-        <button
-          type="button"
-          style={{ cursor: "pointer" }}
-          onClick={onSubmit}
-          className="h-12 w-44 rounded-xl bg-button-green text-2xl font-medium text-main-white"
-        >
-          Submit
-        </button>
+        <RoundButton text="Submit" color="green" click={onSubmit} />
       </div>
     </div>
   );

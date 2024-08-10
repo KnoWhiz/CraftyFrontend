@@ -1,3 +1,4 @@
+import { Raleway } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -34,6 +35,7 @@ const config: Config = {
       },
       fontFamily: {
         Inter: ["Inter", "sans-serif"],
+        Raleway: ["Raleway", "Inter", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -59,7 +59,8 @@ const NavBar = () => {
   };
 
   const handleAbout = () => {
-    // handle about
+    router.push("/about");
+    setPage("about");
   };
 
   const handleDocumentation = () => {
@@ -68,7 +69,8 @@ const NavBar = () => {
   };
 
   const handlePricing = () => {
-    // handle pricing
+    router.push("/pricing");
+    setPage("pricing");
   };
 
   const handleContact = () => {
@@ -79,10 +81,8 @@ const NavBar = () => {
 
   return (
     <nav
-      className="font-Inter text-xl fixed top-0 flex flex-row h-24 w-full items-center justify-between bg-main-white text-main-black pl-20 pr-16"
-      style={
-        page === "documentation" ? { borderBottom: "1px solid black" } : {}
-      }
+      className="font-raleway text-xl fixed top-0 flex flex-row h-24 w-full items-center justify-between bg-main-white text-main-black pl-20 pr-16"
+      style={page !== "home" ? { borderBottom: "1px solid black" } : {}}
     >
       <div className="flex gap-x-10">
         <NavBarItem

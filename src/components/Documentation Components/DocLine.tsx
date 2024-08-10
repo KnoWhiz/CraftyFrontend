@@ -4,7 +4,7 @@ const DocLine = ({ lines, label }: { lines: string[]; label: string }) => {
   const docLines = lines.map((line, index) => (
     <p
       key={index}
-      className={`${line.substring(0, 1) === "#" ? `text-comment-gray font-mono` : `text-main-black font-Inter`} font-normal text-base`}
+      className={`${line.substring(0, 1) === "#" ? `font-extralight` : `font-normal`} text-black font-raleway text-base`}
     >
       {line}
     </p>

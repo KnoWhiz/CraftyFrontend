@@ -3,6 +3,7 @@
 
 import React, { useState } from "react";
 import SignUpPopup from "./SignUpPopup";
+import RoundButton from "../RoundButton";
 
 const Introduction = () => {
   const [showPopup, setShowPopup] = useState<boolean>(false);
@@ -12,7 +13,7 @@ const Introduction = () => {
   };
 
   return (
-    <div className="relative font-Inter bg-gradient-to-b from-main-blue to-white from-60% to-0%">
+    <div className="relative font-raleway bg-gradient-to-b from-main-blue to-white from-60% to-0%">
       <div className="flex flex-col justify-center items-center">
         <div className="flex flex-col mb-1 mt-48 items-center justify-center text-main-black">
           <h1 className="text-title font-semibold text-main-black">
@@ -28,14 +29,13 @@ const Introduction = () => {
           alt="Placeholder"
           className="mt-3 w-4/5 mb-16"
         />
-        <button
-          type="button"
-          style={{ cursor: "pointer" }}
-          onClick={handleSignUp}
-          className="h-12 w-44 rounded-lg bg-button-blue text-2xl font-medium text-main-white"
-        >
-          Sign Up
-        </button>
+        <RoundButton
+          text="Sign Up"
+          color="blue"
+          click={() => {
+            setShowPopup(true);
+          }}
+        />
       </div>
 
       {showPopup && (

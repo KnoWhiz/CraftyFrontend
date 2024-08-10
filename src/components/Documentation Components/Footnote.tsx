@@ -4,7 +4,7 @@ const Footnote = () => {
   return (
     <div>
       <div className="pl-60 pt-24 mb-28 text-main-black">
-        <div className="flex flex-col justify-center items-start h-1/3 w-5/6 gap-y-4 font-Inter">
+        <div className="flex flex-col justify-center items-start h-1/3 w-5/6 gap-y-4 font-raleway">
           <h1 className="text-title font-semibold">Time Consuming and Cost</h1>
           <p>
             At present, the total time required to generate a script for a

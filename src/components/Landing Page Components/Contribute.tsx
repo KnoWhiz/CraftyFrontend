@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import RoundButton from "../RoundButton";
 
 const Contribute = () => {
   const handleContribute = () => {
@@ -8,19 +9,12 @@ const Contribute = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-full gap-y-2 font-Inter">
+    <div className="flex flex-col justify-center items-center h-full gap-y-2 font-raleway">
       <h1 className="text-title font-semibold">Help Shape the Future</h1>
-      <h2 className="text-2xl leading-tight">
+      <h2 className="text-2xl leading-tight mb-10">
         Empower educators through our open source project
       </h2>
-      <button
-        type="button"
-        style={{ cursor: "pointer" }}
-        onClick={handleContribute}
-        className="h-12 w-44 rounded-lg bg-button-blue text-2xl font-medium text-main-white mt-10"
-      >
-        Contribute
-      </button>
+      <RoundButton text="Contribute" color="blue" click={handleContribute} />
     </div>
   );
 };

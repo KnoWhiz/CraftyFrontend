@@ -5,7 +5,7 @@ import DocLabel from "./DocLabel";
 const Cli = () => {
   return (
     <div id="cli" className="pl-60 py-24">
-      <div className="flex flex-col justify-center items-start h-1/3 w-5/6 gap-y-20 font-Inter">
+      <div className="flex flex-col justify-center items-start h-1/3 w-5/6 gap-y-20 font-raleway">
         <div className="text-main-black">
           <h1 className="text-title font-semibold">CLI Commands</h1>
           <p className="inline">Crafty provides 2 main commands: </p>
