@@ -41,7 +41,7 @@ const Contact = () => {
         <InputField
           label="Message"
           width="1/2"
-          height="48"
+          height={`52`}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
