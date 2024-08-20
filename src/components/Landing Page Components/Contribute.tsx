@@ -9,7 +9,7 @@ const Contribute = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-full gap-y-2 font-raleway">
+    <div className="flex flex-col justify-center items-center h-[30rem] gap-y-2 font-raleway">
       <h1 className="text-title font-semibold">Help Shape the Future</h1>
       <h2 className="text-2xl leading-tight mb-10">
         Empower educators through our open source project

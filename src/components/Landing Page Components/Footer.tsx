@@ -3,22 +3,49 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <nav className="fixed bottom-0 flex h-20 w-full flex-row items-center justify-evenly bg-main-white pl-20 pr-16 text-main-black font-raleway border-solid border-t-[1px] border-black">
-      <a href="https://github.com" target="_blank">
-        <img src="assets/logos/GitHub.svg" alt="GitHub Logo" />
-      </a>
+    <nav className="relative bottom-0 text-main-white flex h-[300px] w-full flex-col items-center justify-center bg-footer-blue">
+      <div className="font-raleway absolute top-6 flex flex-col items-center justify-center gap-y-6 w-[24rem] text-center">
+        <h1 className="text-3xl font-medium mb-2 mt-4">Crafty</h1>
+        <div className="flex flex-row justify-center items-center gap-x-8">
+          <a href="/">Home</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/">Documentation</a>
+          <a href="/">Contact</a>
+          <a href="/">About</a>
+        </div>
+        <p className="text-base font-normal">
+          Experience the future of education through Crafty. Stay up to date
+          with our social media community!
+        </p>
+      </div>
+      <div className="absolute bottom-4 flex flex-row items-center justify-center gap-x-8">
+        <a href="/">
+          <img src="assets/logos/GitHub.svg" alt="GitHub Logo" />
+        </a>
 
-      <a href="https://twitter.com" target="_blank">
-        <img src="assets/logos/Twitter.svg" alt="Twitter Logo" />
-      </a>
+        <a href="/">
+          <img src="assets/logos/Twitter.svg" alt="Twitter Logo" />
+        </a>
 
-      <a href="https://www.linkedin.com/company/knowhiz/" target="_blank">
-        <img src="assets/logos/LinkedIn.svg" alt="LinkedIn Logo" />
-      </a>
+        <a href="/">
+          <img src="assets/logos/LinkedIn.svg" alt="LinkedIn Logo" />
+        </a>
 
-      <a href="https://reddit.com" target="_blank">
-        <img src="assets/logos/Reddit.svg" alt="Reddit Logo" />
-      </a>
+        <a href="/">
+          <img src="assets/logos/Reddit.svg" alt="Reddit Logo" />
+        </a>
+      </div>
+
+      <img
+        src="assets/footer-rect-left.svg"
+        alt="GitHub Logo"
+        className="absolute bottom-0 left-0"
+      />
+      <img
+        src="assets/footer-rect-right.svg"
+        alt="GitHub Logo"
+        className="absolute bottom-0 right-0"
+      />
     </nav>
   );
 };

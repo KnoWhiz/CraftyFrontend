@@ -32,6 +32,7 @@ const config: Config = {
         "line-gray": "#EBEBEB",
         "comment-gray": "#757575",
         "main-gray": "#CAC8C8",
+        "footer-blue": "#0C58D3",
       },
       fontFamily: {
         Inter: ["Inter", "sans-serif"],
