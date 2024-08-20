@@ -9,9 +9,9 @@ const Footer = () => {
         <div className="flex flex-row justify-center items-center gap-x-8">
           <a href="/">Home</a>
           <a href="/pricing">Pricing</a>
-          <a href="/">Documentation</a>
-          <a href="/">Contact</a>
-          <a href="/">About</a>
+          <a href="/documentation">Documentation</a>
+          <a href="/contact">Contact</a>
+          <a href="/about">About</a>
         </div>
         <p className="text-base font-normal">
           Experience the future of education through Crafty. Stay up to date

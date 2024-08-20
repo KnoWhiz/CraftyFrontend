@@ -3,9 +3,13 @@
 import React from "react";
 import RoundButton from "../RoundButton";
 
+import { usePathname, useRouter } from "next/navigation";
+
 const Contribute = () => {
+  const router = useRouter();
+
   const handleContribute = () => {
-    // handle contribute
+    router.push("/contribute");
   };
 
   return (

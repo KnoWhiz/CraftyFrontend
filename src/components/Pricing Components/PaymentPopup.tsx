@@ -84,7 +84,7 @@ const PaymentPopup: React.FC<PaymentPopupProps> = ({ close, submit }) => {
         </div>
         <div className="absolute bottom-12 right-24">
           <RoundButton
-            click={submit}
+            click={canPay ? submit : () => {}}
             text="Purchase"
             color={canPay ? "green" : "none"}
             {...(canPay ? {} : { border: true, textColor: "main-black" })}

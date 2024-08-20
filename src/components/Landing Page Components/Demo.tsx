@@ -9,7 +9,7 @@ const Demo = () => {
       <iframe
         width="801"
         height="450"
-        src="https://www.youtube.com/embed/OjBGrg5MEdE?si=rFVwmBhXJaLF3ZE1"
+        src="https://www.youtube.com/embed/OjBGrg5MEdE?rel=0&si=rFVwmBhXJaLF3ZE1"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
