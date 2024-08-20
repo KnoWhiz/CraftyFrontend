@@ -4,9 +4,11 @@
 import React, { useState } from "react";
 import SignUpPopup from "./SignUpPopup";
 import RoundButton from "../RoundButton";
+import ConfirmationPopup from "../ConfirmationPopup";
 
 const Introduction = () => {
   const [showPopup, setShowPopup] = useState<boolean>(false);
+  const [showSubmitPopup, setShowSubmitPopup] = useState<boolean>(false);
 
   const handleSignUp = () => {
     setShowPopup(true);
@@ -42,7 +44,16 @@ const Introduction = () => {
           }}
           onSubmit={() => {
             setShowPopup(false);
+            setShowSubmitPopup(true);
           }}
+        />
+      )}
+      {showSubmitPopup && (
+        <ConfirmationPopup
+          onClose={() => {
+            setShowSubmitPopup(false);
+          }}
+          text="Sign up successful! Check your inbox for more information"
         />
       )}
     </div>

@@ -3,23 +3,27 @@
 import React, { useState } from "react";
 import PricingCard from "./PricingCard";
 import PaymentPopup from "./PaymentPopup";
+import ConfirmationPopup from "../ConfirmationPopup";
 
 const PricingSelection = () => {
   const [showPaymentPopup, setShowPaymentPopup] = useState<boolean>(false);
+  const [showPaymentConfirmationPopup, setShowPaymentConfirmationPopup] =
+    useState<boolean>(false);
+  const [isFree, setIsFree] = useState<boolean>(false);
 
   const handleFreeSubscribe = () => {
-    // handle subscribe
-    setShowPaymentPopup(true);
+    setIsFree(true);
+    setShowPaymentConfirmationPopup(true);
   };
 
   const handleBasicSubscribe = () => {
-    // handle subscribe
     setShowPaymentPopup(true);
+    setIsFree(false);
   };
 
   const handleProSubscribe = () => {
-    // handle subscribe
     setShowPaymentPopup(true);
+    setIsFree(false);
   };
 
   return (
@@ -46,7 +50,20 @@ const PricingSelection = () => {
         <PaymentPopup
           close={() => {
             setShowPaymentPopup(false);
+            setShowPaymentConfirmationPopup(true);
           }}
+        />
+      )}
+      {showPaymentConfirmationPopup && (
+        <ConfirmationPopup
+          onClose={() => {
+            setShowPaymentConfirmationPopup(false);
+          }}
+          text={
+            isFree
+              ? "Free plan activated! Exit this page and start Crafting!"
+              : "Plan activated! Exit this page and start Crafting!"
+          }
         />
       )}
     </div>

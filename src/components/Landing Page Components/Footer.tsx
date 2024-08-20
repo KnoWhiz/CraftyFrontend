@@ -39,12 +39,12 @@ const Footer = () => {
       <img
         src="assets/footer-rect-left.svg"
         alt="GitHub Logo"
-        className="absolute bottom-0 left-0"
+        className="absolute bottom-0 left-0 max-w-[40%]"
       />
       <img
         src="assets/footer-rect-right.svg"
         alt="GitHub Logo"
-        className="absolute bottom-0 right-0"
+        className="absolute bottom-0 right-0 max-w-[40%]"
       />
     </nav>
   );

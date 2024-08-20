@@ -1,17 +1,17 @@
-"use client";
-
 import React from "react";
-import RoundButton from "../RoundButton";
 
-interface SignUpPopupProps {
-  onSubmit: () => void;
+interface ConfirmationPopupProps {
   onClose: () => void;
+  text: string;
 }
 
-const SignUpPopup: React.FC<SignUpPopupProps> = ({ onSubmit, onClose }) => {
+const ConfirmationPopup: React.FC<ConfirmationPopupProps> = ({
+  onClose,
+  text,
+}) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="relative flex h-[26rem] w-[50rem] flex-col gap-y-10 py-10 items-center justify-center bg-white font-raleway">
+      <div className="relative flex h-[18rem] w-[50rem] flex-col gap-y-10 py-10 items-center justify-center bg-white font-raleway">
         <div className="absolute top-6 left-6">
           <svg
             width="21"
@@ -28,21 +28,10 @@ const SignUpPopup: React.FC<SignUpPopupProps> = ({ onSubmit, onClose }) => {
             />
           </svg>
         </div>
-        <div className="flex flex-col items-baseline gap-y-2">
-          <h1 className="text-3xl font-normal">
-            Expertise to Engaging Videos - Try Crafty!
-          </h1>
-          <h1 className="text-3xl font-semibold">Sign up for early access!</h1>
-        </div>
-        <input
-          className="w-2/3 rounded-xl h-14 bg-main-gray px-6 placeholder:text-black text-black placeholder:font-light font-light placeholder:text-xl text-xl"
-          placeholder="Email"
-          type="email"
-        />
-        <RoundButton text="Submit" color="green" click={onSubmit} />
+        <h2 className="text-2xl font-medium">{text}</h2>
       </div>
     </div>
   );
 };
 
-export default SignUpPopup;
+export default ConfirmationPopup;

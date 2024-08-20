@@ -74,7 +74,8 @@ const NavBar = () => {
   };
 
   const handleContact = () => {
-    // handle contact
+    router.push("/contact");
+    setPage("contact");
   };
 
   useEffect;
