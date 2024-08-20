@@ -4,9 +4,10 @@ import RoundButton from "../RoundButton";
 
 interface PaymentPopupProps {
   close: () => void;
+  submit: () => void;
 }
 
-const PaymentPopup: React.FC<PaymentPopupProps> = ({ close }) => {
+const PaymentPopup: React.FC<PaymentPopupProps> = ({ close, submit }) => {
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
   const [input3, setInput3] = useState("");
@@ -82,17 +83,12 @@ const PaymentPopup: React.FC<PaymentPopupProps> = ({ close }) => {
           </div>
         </div>
         <div className="absolute bottom-12 right-24">
-          {canPay ? (
-            <RoundButton click={close} text="Purchase" color="green" />
-          ) : (
-            <RoundButton
-              click={() => {}}
-              text="Purchase"
-              color="none"
-              border
-              textColor="main-black"
-            />
-          )}
+          <RoundButton
+            click={submit}
+            text="Purchase"
+            color={canPay ? "green" : "none"}
+            {...(canPay ? {} : { border: true, textColor: "main-black" })}
+          />
         </div>
       </div>
     </div>

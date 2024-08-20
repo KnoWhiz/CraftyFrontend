@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 
 interface RoundButtonProps {
-  click: Function;
+  click: () => void;
   text: string;
   color: string;
   border?: boolean;
@@ -27,15 +27,11 @@ const RoundButton: React.FC<RoundButtonProps> = ({
     }
   }, [border]);
 
-  const handleClick = () => {
-    click();
-  };
-
   return (
     <button
       type="button"
       style={{ cursor: "pointer" }}
-      onClick={handleClick}
+      onClick={click}
       className={`h-12 w-44 rounded-full text-2xl font-medium ${textColor ? `text-${textColor}` : `text-main-white`} transition-transform transform hover:scale-105 active:scale-95 ${
         color === "green"
           ? "bg-button-green"

@@ -50,6 +50,9 @@ const PricingSelection = () => {
         <PaymentPopup
           close={() => {
             setShowPaymentPopup(false);
+          }}
+          submit={() => {
+            setShowPaymentPopup(false);
             setShowPaymentConfirmationPopup(true);
           }}
         />
