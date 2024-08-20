@@ -5,7 +5,7 @@ import React, { useState } from "react";
 interface InputFieldProps {
   label: string;
   width: string;
-  height?: string;
+  big?: boolean;
   onChange?: (e: any) => void;
   value?: string;
 }
@@ -13,7 +13,7 @@ interface InputFieldProps {
 const InputField: React.FC<InputFieldProps> = ({
   label,
   width,
-  height,
+  big,
   onChange,
   value,
 }) => {
@@ -24,7 +24,7 @@ const InputField: React.FC<InputFieldProps> = ({
       <p className="font-raleway text-main-black text-2xl font-medium">
         {label}
       </p>
-      {height ? (
+      {big ? (
         <textarea
           {...(value ? { value: value } : { value: input })}
           {...(onChange
@@ -33,7 +33,7 @@ const InputField: React.FC<InputFieldProps> = ({
           aria-label="input"
           placeholder=""
           title=""
-          className={`pt-2 border-solid border-[1.5px] border-main-black w-full min-h-${height ? height : `52`} rounded-2xl px-4`}
+          className={`pt-2 border-solid border-[1.5px] border-main-black w-full min-h-52 rounded-2xl px-4`}
         />
       ) : (
         <input

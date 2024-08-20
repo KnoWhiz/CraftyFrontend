@@ -41,9 +41,9 @@ const Contact = () => {
         <InputField
           label="Message"
           width="1/2"
-          height={`52`}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          big
         />
         <div className="flex justify-end w-full">
           <RoundButton click={handleSubmit} text={"Submit"} color={"blue"} />
