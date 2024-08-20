@@ -1,19 +1,25 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import PricingCard from "./PricingCard";
+import PaymentPopup from "./PaymentPopup";
 
 const PricingSelection = () => {
+  const [showPaymentPopup, setShowPaymentPopup] = useState<boolean>(false);
+
   const handleFreeSubscribe = () => {
     // handle subscribe
+    setShowPaymentPopup(true);
   };
 
   const handleBasicSubscribe = () => {
     // handle subscribe
+    setShowPaymentPopup(true);
   };
 
   const handleProSubscribe = () => {
     // handle subscribe
+    setShowPaymentPopup(true);
   };
 
   return (
@@ -36,6 +42,13 @@ const PricingSelection = () => {
         price={9.99}
         onSubscribe={handleProSubscribe}
       />
+      {showPaymentPopup && (
+        <PaymentPopup
+          close={() => {
+            setShowPaymentPopup(false);
+          }}
+        />
+      )}
     </div>
   );
 };

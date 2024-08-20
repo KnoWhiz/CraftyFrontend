@@ -4,7 +4,7 @@ import React from "react";
 const Demo = () => {
   return (
     <div className="flex flex-col justify-center items-center h-full gap-y-6 font-raleway">
-      <h1 className="text-title font-semibold">How it Works</h1>
+      <h1 className="text-title font-bold">How it Works</h1>
 
       <iframe
         width="801"
