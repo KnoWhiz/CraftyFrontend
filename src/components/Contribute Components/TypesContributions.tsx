@@ -4,8 +4,8 @@ const TypesContributions = () => {
   return (
     <div className="font-raleway">
       <h1 className="text-3xl font-semibold mb-6">Types of Contributions</h1>
-      <div className="flex flex-col gap-y-6">
-        <div className="flex flex-col gap-y-2">
+      <div className="flex flex-col gap-y-4">
+        <div className="flex flex-col gap-y-1">
           <h3 className="text-[26px] font-semibold">Bug Reports and Fixes</h3>
           <p className="text-xl font-normal leading-6">
             If you find a bug, please report it by opening an issue. If you can,

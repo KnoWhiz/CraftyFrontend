@@ -2,10 +2,13 @@
 import React from "react";
 import HowToContribute from "./HowToContribute/HowToContribute";
 import TypesContributions from "./TypesContributions";
+import Incentives from "./Incentives";
+import BestPractices from "./BestPractices";
+import Contact from "./Contact";
 
 const ContributionGuide = () => {
   return (
-    <div className="flex pt-40 pb-10 px-24 items-center gap-x-20">
+    <div className="flex pt-40 pb-20 px-24 items-center gap-x-20">
       <div className="flex flex-col gap-y-20 justify-start items-baseline w-full font-raleway leading-8">
         <div className="flex flex-col gap-y-6">
           <h1 className="text-title font-bold mb-3">Contribution Guide</h1>
@@ -20,6 +23,9 @@ const ContributionGuide = () => {
 
         <HowToContribute />
         <TypesContributions />
+        <Incentives />
+        <BestPractices />
+        <Contact />
       </div>
     </div>
   );

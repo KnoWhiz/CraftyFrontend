@@ -55,7 +55,8 @@ const NavBar = () => {
   };
 
   const handleCrafty = () => {
-    // handle crafty
+    router.push("/crafty");
+    setPage("crafty");
   };
 
   const handleAbout = () => {

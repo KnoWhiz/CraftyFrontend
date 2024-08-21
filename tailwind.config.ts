@@ -32,6 +32,7 @@ const config: Config = {
         "line-gray": "#EBEBEB",
         "comment-gray": "#757575",
         "main-gray": "#CAC8C8",
+        "input-gray": "#E6E6E6",
         "footer-blue": "#0C58D3",
       },
       fontFamily: {
