@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from "react";
-import Parameter from "./Parameter";
+import React, { useEffect, useState } from 'react'
+import Parameter from './Parameter'
 
 interface ParametersProps {
-  onValidSelect: () => void;
-  onInvalidSelect: () => void;
+  onValidSelect: () => void
+  onInvalidSelect: () => void
 }
 
 const Parameters: React.FC<ParametersProps> = ({
   onValidSelect,
   onInvalidSelect,
 }) => {
-  const [noteLength, setNoteLength] = useState<string>("500");
-  const [slideNumber, setSlideNumber] = useState<string>("30");
+  const [noteLength, setNoteLength] = useState<string>('500')
+  const [slideNumber, setSlideNumber] = useState<string>('30')
 
   useEffect(() => {
     // Convert to numbers
-    const numericNoteLength = Number(noteLength);
-    const numericSlideNumber = Number(slideNumber);
+    const numericNoteLength = Number(noteLength)
+    const numericSlideNumber = Number(slideNumber)
 
     // Check if noteLength is a valid number and within the range
     if (
@@ -27,16 +27,16 @@ const Parameters: React.FC<ParametersProps> = ({
       numericSlideNumber >= 30 &&
       numericSlideNumber <= 100
     ) {
-      onValidSelect();
+      onValidSelect()
     } else {
-      onInvalidSelect();
+      onInvalidSelect()
     }
-  }, [noteLength, onInvalidSelect, onValidSelect, slideNumber]);
+  }, [noteLength, onInvalidSelect, onValidSelect, slideNumber])
 
   return (
-    <div className="flex flex-col justify-start items-start gap-y-4 max-w-[50%]">
-      <h1 className="text-3xl font-semibold pb-4">Parameters:</h1>
-      <div className="flex flex-col justify-start items-start gap-y-10 text-base leading-tight">
+    <div className="flex max-w-[50%] flex-col items-start justify-start gap-y-4">
+      <h1 className="pb-4 text-3xl font-semibold">Parameters:</h1>
+      <div className="flex flex-col items-start justify-start gap-y-10 text-base leading-tight">
         <Parameter
           title="Temperature"
           desc="Creativity of the generated content. Default value is 0, max value is 10"
@@ -58,7 +58,7 @@ const Parameters: React.FC<ParametersProps> = ({
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Parameters;
+export default Parameters

@@ -1,6 +1,6 @@
-import NavBar from "@/components/NavBar";
-import PricingHeader from "@/components/Pricing Components/PricingHeader";
-import PricingSelection from "@/components/Pricing Components/PricingSelection";
+import NavBar from '@/components/NavBar'
+import PricingHeader from '@/components/Pricing Components/PricingHeader'
+import PricingSelection from '@/components/Pricing Components/PricingSelection'
 
 export default function Home() {
   return (
@@ -9,5 +9,5 @@ export default function Home() {
       <PricingHeader />
       <PricingSelection />
     </div>
-  );
+  )
 }

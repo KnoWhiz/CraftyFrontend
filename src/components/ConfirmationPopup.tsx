@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
 interface ConfirmationPopupProps {
-  onClose: () => void;
-  text: string;
+  onClose: () => void
+  text: string
 }
 
 const ConfirmationPopup: React.FC<ConfirmationPopupProps> = ({
@@ -11,8 +11,8 @@ const ConfirmationPopup: React.FC<ConfirmationPopupProps> = ({
 }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="relative flex h-[18rem] w-[50rem] flex-col gap-y-10 py-10 items-center justify-center bg-white font-raleway">
-        <div className="absolute top-6 left-6">
+      <div className="font-raleway relative flex h-[18rem] w-[50rem] flex-col items-center justify-center gap-y-10 bg-white py-10">
+        <div className="absolute left-6 top-6">
           <svg
             width="21"
             height="19"
@@ -31,7 +31,7 @@ const ConfirmationPopup: React.FC<ConfirmationPopupProps> = ({
         <h2 className="text-2xl font-medium">{text}</h2>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ConfirmationPopup;
+export default ConfirmationPopup

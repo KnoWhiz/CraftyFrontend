@@ -1,11 +1,11 @@
-import React from "react";
-import DocLine from "./DocLine";
-import DocLabel from "./DocLabel";
+import React from 'react'
+import DocLine from './DocLine'
+import DocLabel from './DocLabel'
 
 const Cli = () => {
   return (
     <div id="cli" className="pl-60">
-      <div className="flex flex-col justify-center items-start h-1/3 w-5/6 gap-y-20 font-raleway text-xl">
+      <div className="font-raleway flex h-1/3 w-5/6 flex-col items-start justify-center gap-y-20 text-xl">
         <div className="text-main-black">
           <h1 className="text-3xl font-semibold">CLI Commands</h1>
           <p className="inline">Crafty provides 2 main commands: </p>
@@ -14,10 +14,10 @@ const Cli = () => {
           <DocLabel label="step" />
         </div>
 
-        <div className="flex flex-col w-full gap-y-6">
+        <div className="flex w-full flex-col gap-y-6">
           <h2
             id="create"
-            className="text-3xl text-main-green font-normal leading-tight"
+            className="text-3xl font-normal leading-tight text-main-green"
           >
             Create
           </h2>
@@ -26,9 +26,9 @@ const Cli = () => {
             <p className="inline">The </p>
             <DocLabel label="create" />
             <p className="inline">
-              {" "}
+              {' '}
               command is used to create a new course video from given topic. To
-              use the{" "}
+              use the{' '}
             </p>
             <DocLabel label="create" />
             <p className="inline"> command, simply type:</p>
@@ -45,14 +45,14 @@ const Cli = () => {
             <p className="inline">The </p>
             <DocLabel label="create" />
             <p className="inline">
-              {" "}
+              {' '}
               command has several optional parameters that can be used to
               customize the behavior of the command. Here&apos;s a brief
               description of each:
             </p>
           </div>
 
-          <ul className="list-disc pl-4 space-y-3">
+          <ul className="list-disc space-y-3 pl-4">
             <li>
               <DocLabel label="--temperature <float>" />
               <p className="inline">
@@ -125,7 +125,7 @@ const Cli = () => {
 
           <DocLine
             lines={[
-              "python Crafty/cli.py create --topic <topic> --temperature <float> --creative_temperature <float> --slides_template_file... ",
+              'python Crafty/cli.py create --topic <topic> --temperature <float> --creative_temperature <float> --slides_template_file... ',
             ]}
             label=""
           />
@@ -140,23 +140,23 @@ const Cli = () => {
             <p className="inline">, and </p>
             <DocLabel label="<int>" />
             <p className="inline">
-              {" "}
-              with the actual values you want to use. If you want to use the{" "}
+              {' '}
+              with the actual values you want to use. If you want to use the{' '}
             </p>
             <DocLabel label="--parallel_processing" />
             <p className="inline"> or </p>
             <DocLabel label="--advanced_model" />
             <p className="inline">
-              {" "}
+              {' '}
               flags, simply include them in the command without a value.
             </p>
           </div>
         </div>
 
-        <div className="flex flex-col w-full gap-y-6">
+        <div className="flex w-full flex-col gap-y-6">
           <h2
             id="step"
-            className="text-3xl text-main-green font-normal leading-tight"
+            className="text-3xl font-normal leading-tight text-main-green"
           >
             Step
           </h2>
@@ -165,13 +165,13 @@ const Cli = () => {
             <p className="inline">The </p>
             <DocLabel label="step" />
             <p className="inline">
-              {" "}
+              {' '}
               command is used to execute a specific step in the course creation
               process. The steps should be executed in the following order:
             </p>
           </div>
 
-          <ol className="list-decimal pl-4 space-y-1">
+          <ol className="list-decimal space-y-1 pl-4">
             <li>
               <DocLabel label="chapter" />
             </li>
@@ -197,7 +197,7 @@ const Cli = () => {
 
           <p className="inline">Here&apos;s how to use each step:</p>
 
-          <div className="flex flex-col w-full gap-y-2">
+          <div className="flex w-full flex-col gap-y-2">
             <h3 id="chapter" className="text-2xl font-medium">
               Chapter
             </h3>
@@ -207,7 +207,7 @@ const Cli = () => {
               and chapters for a given learning topic.
             </p>
             <DocLine
-              lines={["python Crafty/cli.py step chapter --topic <topic>"]}
+              lines={['python Crafty/cli.py step chapter --topic <topic>']}
               label=""
             />
             <p className="inline">
@@ -217,7 +217,7 @@ const Cli = () => {
             </p>
           </div>
 
-          <div className="flex flex-col w-full gap-y-2">
+          <div className="flex w-full flex-col gap-y-2">
             <h3 id="section" className="text-2xl font-medium">
               Section
             </h3>
@@ -227,52 +227,52 @@ const Cli = () => {
             </p>
             <DocLine
               lines={[
-                "python Crafty/cli.py step section --course_id <course_id> --sections_per_chapter 20",
+                'python Crafty/cli.py step section --course_id <course_id> --sections_per_chapter 20',
               ]}
               label=""
             />
             <div>
               <DocLabel label="--sections_per_chapter" />
               <p className="inline">
-                {" "}
+                {' '}
                 is the number of sections you want to create for each chapter.
                 The default value is 20.
               </p>
             </div>
           </div>
 
-          <div className="flex flex-col w-full gap-y-2">
+          <div className="flex w-full flex-col gap-y-2">
             <h3 id="note" className="text-2xl font-medium">
               Note
             </h3>
 
             <div>
               <p className="inline">
-                To generate notes for the sections of a course, use the{" "}
+                To generate notes for the sections of a course, use the{' '}
               </p>
               <DocLabel label="note" />
               <p className="inline">
-                {" "}
-                step. Starting from notes step, you must use{" "}
+                {' '}
+                step. Starting from notes step, you must use{' '}
               </p>
               <DocLabel label="--chapter" />
               <p className="inline">
-                {" "}
+                {' '}
                 to specify which chapter you want to generate.
               </p>
             </div>
             <DocLine
               lines={[
-                "python Crafty/cli.py step note --course_id <course_id> --max_note_expansion_words 500 --chapter 0",
+                'python Crafty/cli.py step note --course_id <course_id> --max_note_expansion_words 500 --chapter 0',
               ]}
               label=""
             />
             <div>
-              <div className="flex flex-col w-full gap-y-2">
+              <div className="flex w-full flex-col gap-y-2">
                 <div>
                   <DocLabel label="--max_note_expansion_words" />
                   <p className="inline">
-                    {" "}
+                    {' '}
                     is the maximum number of words to expand the notes. The
                     default value is 500.
                   </p>
@@ -281,7 +281,7 @@ const Cli = () => {
                 <div>
                   <DocLabel label="--chapter" />
                   <p className="inline">
-                    {" "}
+                    {' '}
                     is the chapter index to generate notes for. The chapter
                     number start from 0.
                   </p>
@@ -294,7 +294,7 @@ const Cli = () => {
                     Here
                   </a>
                   <p className="inline">
-                    {" "}
+                    {' '}
                     is an example of notes generation for a course with 3
                     chapters
                   </p>
@@ -303,29 +303,29 @@ const Cli = () => {
             </div>
           </div>
 
-          <div className="flex flex-col w-full gap-y-2">
+          <div className="flex w-full flex-col gap-y-2">
             <h3 id="slide" className="text-2xl font-medium">
               Slide
             </h3>
 
             <div>
               <p className="inline">
-                To create slides for the notes of a course, use the{" "}
+                To create slides for the notes of a course, use the{' '}
               </p>
               <DocLabel label="slide" />
               <p className="inline"> step. </p>
             </div>
             <DocLine
               lines={[
-                "python Crafty/cli.py step slide --course_id <course_id> --slides_template_file 3 --content_slide_pages 30 --chapter 0",
+                'python Crafty/cli.py step slide --course_id <course_id> --slides_template_file 3 --content_slide_pages 30 --chapter 0',
               ]}
               label=""
             />
-            <div className="flex flex-col w-full gap-y-2">
+            <div className="flex w-full flex-col gap-y-2">
               <div>
                 <DocLabel label="--slides_template_file" />
                 <p className="inline">
-                  {" "}
+                  {' '}
                   is the template file to use for generating slides. The default
                   value is 3.
                 </p>
@@ -334,7 +334,7 @@ const Cli = () => {
               <div>
                 <DocLabel label="--content_slide_pages" />
                 <p className="inline">
-                  {" "}
+                  {' '}
                   is the number of pages to generate for content slides. The
                   default value is 30.
                 </p>
@@ -342,47 +342,47 @@ const Cli = () => {
             </div>
           </div>
 
-          <div className="flex flex-col w-full gap-y-2">
+          <div className="flex w-full flex-col gap-y-2">
             <h3 id="script" className="text-2xl font-medium">
               Script
             </h3>
 
             <div>
               <p className="inline">
-                To create scripts for the slides of a course, use the{" "}
+                To create scripts for the slides of a course, use the{' '}
               </p>
               <DocLabel label="script" />
               <p className="inline"> step. </p>
             </div>
             <DocLine
               lines={[
-                "python Crafty/cli.py step script --course_id <course_id> --chapter 0",
+                'python Crafty/cli.py step script --course_id <course_id> --chapter 0',
               ]}
               label=""
             />
           </div>
 
-          <div className="flex flex-col w-full gap-y-2">
+          <div className="flex w-full flex-col gap-y-2">
             <h3 id="voice" className="text-2xl font-medium">
               Voice
             </h3>
 
             <div>
               <p className="inline">
-                To generate voice for reading the scripts of a course, use the{" "}
+                To generate voice for reading the scripts of a course, use the{' '}
               </p>
               <DocLabel label="voice" />
               <p className="inline"> step. </p>
             </div>
             <DocLine
               lines={[
-                "python Crafty/cli.py step voice --course_id <course_id> --chapter 0",
+                'python Crafty/cli.py step voice --course_id <course_id> --chapter 0',
               ]}
               label=""
             />
           </div>
 
-          <div className="flex flex-col w-full gap-y-2">
+          <div className="flex w-full flex-col gap-y-2">
             <h3 id="video" className="text-2xl font-medium">
               Video
             </h3>
@@ -390,14 +390,14 @@ const Cli = () => {
             <div>
               <p className="inline">
                 Finally, to create videos from the voices and slides of a
-                course, use the{" "}
+                course, use the{' '}
               </p>
               <DocLabel label="video" />
               <p className="inline"> step. </p>
             </div>
             <DocLine
               lines={[
-                "python Crafty/cli.py step video --course_id <course_id> --chapter 0",
+                'python Crafty/cli.py step video --course_id <course_id> --chapter 0',
               ]}
               label=""
             />
@@ -405,7 +405,7 @@ const Cli = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Cli;
+export default Cli

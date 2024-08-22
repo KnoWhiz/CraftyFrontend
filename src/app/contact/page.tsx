@@ -1,5 +1,5 @@
-import Contact from "@/components/Contact Components/Contact";
-import NavBar from "@/components/NavBar";
+import Contact from '@/components/Contact Components/Contact'
+import NavBar from '@/components/NavBar'
 
 export default function Home() {
   return (
@@ -7,5 +7,5 @@ export default function Home() {
       <NavBar />
       <Contact />
     </div>
-  );
+  )
 }

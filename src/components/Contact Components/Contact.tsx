@@ -1,30 +1,30 @@
-"use client";
-import React, { useState } from "react";
-import InputField from "../Pricing Components/InputField";
-import RoundButton from "../RoundButton";
+'use client'
+import React, { useState } from 'react'
+import InputField from '../Pricing Components/InputField'
+import RoundButton from '../RoundButton'
 
 const Contact = () => {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
+  const [name, setName] = useState<string>('')
+  const [email, setEmail] = useState<string>('')
+  const [message, setMessage] = useState<string>('')
 
   const handleSubmit = () => {
     // Handle submit logic here
-    console.log("submitted");
-    console.log("Current values:", { name, email, message });
+    console.log('submitted')
+    console.log('Current values:', { name, email, message })
 
     // Reset input fields
-    setName("");
-    setEmail("");
-    setMessage("");
-  };
+    setName('')
+    setEmail('')
+    setMessage('')
+  }
 
   return (
-    <div className="flex pt-40 pb-10 px-24 items-center gap-x-20">
-      <div className="flex flex-col gap-y-6 justify-start items-baseline h-full w-full font-raleway leading-8">
-        <h1 className="text-title font-bold mb-3">Contact</h1>
+    <div className="flex items-center gap-x-20 px-24 pb-10 pt-40">
+      <div className="font-raleway flex h-full w-full flex-col items-baseline justify-start gap-y-6 leading-8">
+        <h1 className="mb-3 text-title font-bold">Contact</h1>
         <h3 className="text-2xl font-medium">
-          We would love to answer any questions or concerns you may have{" "}
+          We would love to answer any questions or concerns you may have{' '}
         </h3>
         <InputField
           value={name}
@@ -45,12 +45,12 @@ const Contact = () => {
           onChange={(e) => setMessage(e.target.value)}
           big
         />
-        <div className="flex justify-end w-full">
-          <RoundButton click={handleSubmit} text={"Submit"} color={"blue"} />
+        <div className="flex w-full justify-end">
+          <RoundButton click={handleSubmit} text={'Submit'} color={'blue'} />
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

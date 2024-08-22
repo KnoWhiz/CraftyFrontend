@@ -1,23 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
+'use client'
 
-import React, { useState } from "react";
-import SignUpPopup from "./SignUpPopup";
-import RoundButton from "../RoundButton";
-import ConfirmationPopup from "../ConfirmationPopup";
+import React, { useState } from 'react'
+import SignUpPopup from './SignUpPopup'
+import RoundButton from '../RoundButton'
+import ConfirmationPopup from '../ConfirmationPopup'
 
 const Introduction = () => {
-  const [showPopup, setShowPopup] = useState<boolean>(false);
-  const [showSubmitPopup, setShowSubmitPopup] = useState<boolean>(false);
+  const [showPopup, setShowPopup] = useState<boolean>(false)
+  const [showSubmitPopup, setShowSubmitPopup] = useState<boolean>(false)
 
   const handleSignUp = () => {
-    setShowPopup(true);
-  };
+    setShowPopup(true)
+  }
 
   return (
-    <div className="relative font-raleway bg-gradient-to-b from-main-blue to-white from-60% to-0%">
-      <div className="flex flex-col justify-center items-center">
-        <div className="flex flex-col mb-1 mt-48 items-center justify-center text-main-black">
+    <div className="font-raleway relative bg-gradient-to-b from-main-blue from-60% to-white to-0%">
+      <div className="flex flex-col items-center justify-center">
+        <div className="mb-1 mt-48 flex flex-col items-center justify-center text-main-black">
           <h1 className="text-title font-bold text-main-black">
             Craft Compelling Courses with Ease
           </h1>
@@ -29,7 +29,7 @@ const Introduction = () => {
         <img
           src="assets/illustrations/landingpage-placeholder.png"
           alt="Placeholder"
-          className="mt-3 w-4/5 mb-16"
+          className="mb-16 mt-3 w-4/5"
         />
         <div className="flex flex-row items-center justify-center gap-x-6">
           <h1 className="text-3xl font-bold">Get early access today!</h1>
@@ -40,24 +40,24 @@ const Introduction = () => {
       {showPopup && (
         <SignUpPopup
           onClose={() => {
-            setShowPopup(false);
+            setShowPopup(false)
           }}
           onSubmit={() => {
-            setShowPopup(false);
-            setShowSubmitPopup(true);
+            setShowPopup(false)
+            setShowSubmitPopup(true)
           }}
         />
       )}
       {showSubmitPopup && (
         <ConfirmationPopup
           onClose={() => {
-            setShowSubmitPopup(false);
+            setShowSubmitPopup(false)
           }}
           text="Sign up successful! Check your inbox for more information"
         />
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Introduction;
+export default Introduction

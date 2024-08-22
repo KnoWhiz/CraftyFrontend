@@ -1,33 +1,33 @@
-"use client";
+'use client'
 
-import React, { useState } from "react";
-import PricingCard from "./PricingCard";
-import PaymentPopup from "./PaymentPopup";
-import ConfirmationPopup from "../ConfirmationPopup";
+import React, { useState } from 'react'
+import PricingCard from './PricingCard'
+import PaymentPopup from './PaymentPopup'
+import ConfirmationPopup from '../ConfirmationPopup'
 
 const PricingSelection = () => {
-  const [showPaymentPopup, setShowPaymentPopup] = useState<boolean>(false);
+  const [showPaymentPopup, setShowPaymentPopup] = useState<boolean>(false)
   const [showPaymentConfirmationPopup, setShowPaymentConfirmationPopup] =
-    useState<boolean>(false);
-  const [isFree, setIsFree] = useState<boolean>(false);
+    useState<boolean>(false)
+  const [isFree, setIsFree] = useState<boolean>(false)
 
   const handleFreeSubscribe = () => {
-    setIsFree(true);
-    setShowPaymentConfirmationPopup(true);
-  };
+    setIsFree(true)
+    setShowPaymentConfirmationPopup(true)
+  }
 
   const handleBasicSubscribe = () => {
-    setShowPaymentPopup(true);
-    setIsFree(false);
-  };
+    setShowPaymentPopup(true)
+    setIsFree(false)
+  }
 
   const handleProSubscribe = () => {
-    setShowPaymentPopup(true);
-    setIsFree(false);
-  };
+    setShowPaymentPopup(true)
+    setIsFree(false)
+  }
 
   return (
-    <div className="py-6 px-24 flex flex-row justify-evenly items-center">
+    <div className="flex flex-row items-center justify-evenly px-24 py-6">
       <PricingCard
         title="Free"
         desc="Starter plan for individual educators and small schools with limited budgets. Get access to basic video generation (limited customization options) for up to 5 videos"
@@ -49,28 +49,28 @@ const PricingSelection = () => {
       {showPaymentPopup && (
         <PaymentPopup
           close={() => {
-            setShowPaymentPopup(false);
+            setShowPaymentPopup(false)
           }}
           submit={() => {
-            setShowPaymentPopup(false);
-            setShowPaymentConfirmationPopup(true);
+            setShowPaymentPopup(false)
+            setShowPaymentConfirmationPopup(true)
           }}
         />
       )}
       {showPaymentConfirmationPopup && (
         <ConfirmationPopup
           onClose={() => {
-            setShowPaymentConfirmationPopup(false);
+            setShowPaymentConfirmationPopup(false)
           }}
           text={
             isFree
-              ? "Free plan activated! Exit this page and start Crafting!"
-              : "Plan activated! Exit this page and start Crafting!"
+              ? 'Free plan activated! Exit this page and start Crafting!'
+              : 'Plan activated! Exit this page and start Crafting!'
           }
         />
       )}
     </div>
-  );
-};
+  )
+}
 
-export default PricingSelection;
+export default PricingSelection

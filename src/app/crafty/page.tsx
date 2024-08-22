@@ -1,5 +1,5 @@
-import CraftyPage from "@/components/Crafty Components/CraftyPage";
-import NavBar from "@/components/NavBar";
+import CraftyPage from '@/components/Crafty Components/CraftyPage'
+import NavBar from '@/components/NavBar'
 
 export default function Home() {
   return (
@@ -7,5 +7,5 @@ export default function Home() {
       <NavBar />
       <CraftyPage />
     </div>
-  );
+  )
 }

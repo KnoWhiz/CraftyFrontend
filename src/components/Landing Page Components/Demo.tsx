@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React from 'react'
 
 const Demo = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-full gap-y-6 font-raleway pt-24">
+    <div className="font-raleway flex h-full flex-col items-center justify-center gap-y-6 pt-24">
       <h1 className="text-title font-bold">How it Works</h1>
 
       <iframe
@@ -19,7 +19,7 @@ const Demo = () => {
         See how Crafty turns a topic into a video lecture in our video!
       </h2>
     </div>
-  );
-};
+  )
+}
 
-export default Demo;
+export default Demo

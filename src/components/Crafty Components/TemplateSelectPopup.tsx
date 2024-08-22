@@ -1,10 +1,10 @@
-import React from "react";
-import RoundButton from "../RoundButton";
+import React from 'react'
+import RoundButton from '../RoundButton'
 
 interface TemplateSelectPopupProps {
-  onSelect: () => void;
-  onClose: () => void;
-  template: string;
+  onSelect: () => void
+  onClose: () => void
+  template: string
 }
 
 const TemplateSelectPopup: React.FC<TemplateSelectPopupProps> = ({
@@ -14,8 +14,8 @@ const TemplateSelectPopup: React.FC<TemplateSelectPopupProps> = ({
 }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="relative flex h-[38rem] w-[55rem] flex-col gap-y-10 py-10 items-center justify-center bg-white font-raleway">
-        <div className="absolute top-6 left-6">
+      <div className="font-raleway relative flex h-[38rem] w-[55rem] flex-col items-center justify-center gap-y-10 bg-white py-10">
+        <div className="absolute left-6 top-6">
           <svg
             width="21"
             height="19"
@@ -33,11 +33,11 @@ const TemplateSelectPopup: React.FC<TemplateSelectPopupProps> = ({
         </div>
         <img src={`${template}`} alt="template" />
         <div className="absolute bottom-12 right-28">
-          <RoundButton click={onSelect} text={"Select"} color={"blue"} />
+          <RoundButton click={onSelect} text={'Select'} color={'blue'} />
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default TemplateSelectPopup;
+export default TemplateSelectPopup

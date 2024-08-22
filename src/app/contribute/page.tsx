@@ -1,5 +1,5 @@
-import ContributionGuide from "@/components/Contribute Components/ContributionGuide";
-import NavBar from "@/components/NavBar";
+import ContributionGuide from '@/components/Contribute Components/ContributionGuide'
+import NavBar from '@/components/NavBar'
 
 export default function Home() {
   return (
@@ -7,5 +7,5 @@ export default function Home() {
       <NavBar />
       <ContributionGuide />
     </div>
-  );
+  )
 }

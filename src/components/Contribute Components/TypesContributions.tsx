@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 
 const TypesContributions = () => {
   return (
     <div className="font-raleway w-full">
-      <h1 className="text-3xl font-semibold mb-6">Types of Contributions</h1>
+      <h1 className="mb-6 text-3xl font-semibold">Types of Contributions</h1>
       <div className="flex flex-col gap-y-4">
         <div className="flex flex-col gap-y-1">
           <h3 className="text-[26px] font-semibold">Bug Reports and Fixes</h3>
@@ -41,7 +41,7 @@ const TypesContributions = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default TypesContributions;
+export default TypesContributions

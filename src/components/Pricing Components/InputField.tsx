@@ -1,13 +1,13 @@
-"use client";
+'use client'
 
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 interface InputFieldProps {
-  label: string;
-  width: string;
-  big?: boolean;
-  onChange?: (e: any) => void;
-  value?: string;
+  label: string
+  width: string
+  big?: boolean
+  onChange?: (e: any) => void
+  value?: string
 }
 
 const InputField: React.FC<InputFieldProps> = ({
@@ -17,11 +17,11 @@ const InputField: React.FC<InputFieldProps> = ({
   onChange,
   value,
 }) => {
-  const [input, setInput] = useState<string>("");
+  const [input, setInput] = useState<string>('')
 
   return (
     <div className={`flex flex-col items-start justify-start w-${width}`}>
-      <p className="font-raleway text-main-black text-2xl font-medium">
+      <p className="font-raleway text-2xl font-medium text-main-black">
         {label}
       </p>
       {big ? (
@@ -33,7 +33,7 @@ const InputField: React.FC<InputFieldProps> = ({
           aria-label="input"
           placeholder=""
           title=""
-          className={`pt-2 border-solid border-[1.5px] border-main-black w-full min-h-52 rounded-2xl px-4`}
+          className={`min-h-52 w-full rounded-2xl border-[1.5px] border-solid border-main-black px-4 pt-2`}
         />
       ) : (
         <input
@@ -44,11 +44,11 @@ const InputField: React.FC<InputFieldProps> = ({
           aria-label="input"
           placeholder=""
           title=""
-          className={`border-solid border-[1.5px] border-main-black w-full h-12 rounded-2xl px-4`}
+          className={`h-12 w-full rounded-2xl border-[1.5px] border-solid border-main-black px-4`}
         />
       )}
     </div>
-  );
-};
+  )
+}
 
-export default InputField;
+export default InputField

@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react'
 
 const Footnote = () => {
   return (
     <div>
-      <div className="pl-60 pt-24 mb-28 text-main-black">
-        <div className="flex flex-col justify-center items-start h-1/3 w-5/6 gap-y-4 font-raleway">
+      <div className="mb-28 pl-60 pt-24 text-main-black">
+        <div className="font-raleway flex h-1/3 w-5/6 flex-col items-start justify-center gap-y-4">
           <h1 className="text-3xl font-semibold">Time Consuming and Cost</h1>
           <p className="text-xl">
             At present, the total time required to generate a script for a
@@ -30,7 +30,7 @@ const Footnote = () => {
         <p>.</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footnote;
+export default Footnote

@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React from 'react'
 
 const About = () => {
   return (
-    <div className="flex pt-40 pb-10 px-24 items-center gap-x-20">
-      <div className="flex flex-col gap-y-6 justify-start items-baseline w-1/2 font-raleway leading-8">
-        <h1 className="text-title font-bold mb-3">About Us</h1>
+    <div className="flex items-center gap-x-20 px-24 pb-10 pt-40">
+      <div className="font-raleway flex w-1/2 flex-col items-baseline justify-start gap-y-6 leading-8">
+        <h1 className="mb-3 text-title font-bold">About Us</h1>
         <p className="text-xl">
           At Crafty, we believe that every educator deserves the tools to create
           engaging and effective video content without the hassle. That&apos;s
@@ -39,7 +39,7 @@ const About = () => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About

@@ -1,18 +1,18 @@
-"use client";
+'use client'
 
-import React from "react";
-import RoundButton from "../RoundButton";
+import React from 'react'
+import RoundButton from '../RoundButton'
 
 interface SignUpPopupProps {
-  onSubmit: () => void;
-  onClose: () => void;
+  onSubmit: () => void
+  onClose: () => void
 }
 
 const SignUpPopup: React.FC<SignUpPopupProps> = ({ onSubmit, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="relative flex h-[26rem] w-[50rem] flex-col gap-y-10 py-10 items-center justify-center bg-white font-raleway">
-        <div className="absolute top-6 left-6">
+      <div className="font-raleway relative flex h-[26rem] w-[50rem] flex-col items-center justify-center gap-y-10 bg-white py-10">
+        <div className="absolute left-6 top-6">
           <svg
             width="21"
             height="19"
@@ -35,14 +35,14 @@ const SignUpPopup: React.FC<SignUpPopupProps> = ({ onSubmit, onClose }) => {
           <h1 className="text-3xl font-semibold">Sign up for early access!</h1>
         </div>
         <input
-          className="w-2/3 rounded-xl h-14 bg-main-gray px-6 placeholder:text-black text-black placeholder:font-light font-light placeholder:text-xl text-xl"
+          className="h-14 w-2/3 rounded-xl bg-main-gray px-6 text-xl font-light text-black placeholder:text-xl placeholder:font-light placeholder:text-black"
           placeholder="Email"
           type="email"
         />
         <RoundButton text="Submit" color="green" click={onSubmit} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SignUpPopup;
+export default SignUpPopup

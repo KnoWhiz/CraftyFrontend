@@ -1,15 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
+'use client'
 
-import React, { useEffect, useRef } from "react";
-import { useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import React, { useEffect, useRef } from 'react'
+import { useState } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
 
 interface NavBarItemProps {
-  name: string;
-  handle: () => void;
-  targetPage: string;
-  currentPage: string;
+  name: string
+  handle: () => void
+  targetPage: string
+  currentPage: string
 }
 
 const NavBarItem: React.FC<NavBarItemProps> = ({
@@ -20,87 +20,87 @@ const NavBarItem: React.FC<NavBarItemProps> = ({
 }) => {
   return (
     <h1
-      style={{ cursor: "pointer" }}
+      style={{ cursor: 'pointer' }}
       onClick={handle}
       className={targetPage === currentPage ? `font-semibold` : `font-normal`}
     >
       {name}
     </h1>
-  );
-};
+  )
+}
 
 const NavBar = () => {
-  const [page, setPage] = useState<string>("home");
-  const router = useRouter();
-  const pathname = usePathname();
-  const [showAccountSidebar, setShowAccountSidebar] = useState<boolean>(false);
-  const navRef = useRef<HTMLElement>(null);
+  const [page, setPage] = useState<string>('home')
+  const router = useRouter()
+  const pathname = usePathname()
+  const [showAccountSidebar, setShowAccountSidebar] = useState<boolean>(false)
+  const navRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     function handleClick(event: MouseEvent) {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setShowAccountSidebar(false);
+        setShowAccountSidebar(false)
       }
     }
 
-    window.addEventListener("click", handleClick);
+    window.addEventListener('click', handleClick)
 
     return () => {
-      window.removeEventListener("click", handleClick);
-    };
-  }, []);
+      window.removeEventListener('click', handleClick)
+    }
+  }, [])
 
   useEffect(() => {
-    if (pathname.includes("/crafty")) {
-      setPage("crafty");
-    } else if (pathname.includes("/about")) {
-      setPage("about");
-    } else if (pathname.includes("/documentation")) {
-      setPage("documentation");
-    } else if (pathname.includes("/pricing")) {
-      setPage("pricing");
-    } else if (pathname.includes("/contact")) {
-      setPage("contact");
+    if (pathname.includes('/crafty')) {
+      setPage('crafty')
+    } else if (pathname.includes('/about')) {
+      setPage('about')
+    } else if (pathname.includes('/documentation')) {
+      setPage('documentation')
+    } else if (pathname.includes('/pricing')) {
+      setPage('pricing')
+    } else if (pathname.includes('/contact')) {
+      setPage('contact')
     } else {
-      setPage("home");
+      setPage('home')
     }
-  }, [pathname]);
+  }, [pathname])
 
   const handleHome = () => {
-    router.push("/");
-    setPage("home");
-  };
+    router.push('/')
+    setPage('home')
+  }
 
   const handleCrafty = () => {
-    router.push("/crafty");
-    setPage("crafty");
-  };
+    router.push('/crafty')
+    setPage('crafty')
+  }
 
   const handleAbout = () => {
-    router.push("/about");
-    setPage("about");
-  };
+    router.push('/about')
+    setPage('about')
+  }
 
   const handleDocumentation = () => {
-    router.push("/documentation");
-    setPage("documentation");
-  };
+    router.push('/documentation')
+    setPage('documentation')
+  }
 
   const handlePricing = () => {
-    router.push("/pricing");
-    setPage("pricing");
-  };
+    router.push('/pricing')
+    setPage('pricing')
+  }
 
   const handleContact = () => {
-    router.push("/contact");
-    setPage("contact");
-  };
+    router.push('/contact')
+    setPage('contact')
+  }
 
   return (
     <>
       <nav
         ref={navRef}
-        className="z-50 font-raleway text-xl fixed top-0 border-b-[1px] border-solid border-black flex flex-row h-24 w-full items-center justify-between bg-main-white text-main-black pl-20 pr-16"
+        className="font-raleway fixed top-0 z-50 flex h-24 w-full flex-row items-center justify-between border-b-[1px] border-solid border-black bg-main-white pl-20 pr-16 text-xl text-main-black"
       >
         <div className="flex gap-x-10">
           <NavBarItem
@@ -145,7 +145,7 @@ const NavBar = () => {
           onClick={() => {
             showAccountSidebar
               ? setShowAccountSidebar(false)
-              : setShowAccountSidebar(true);
+              : setShowAccountSidebar(true)
           }}
         >
           <svg
@@ -163,9 +163,9 @@ const NavBar = () => {
         </div>
       </nav>
       {showAccountSidebar && (
-        <nav className="fixed z-50 h-full w-72 border-l-[1px] border-solid border-black bg-white top-24 right-0 flex flex-col">
-          <div className="flex flex-col justify-start items-center w-full h-1/3 py-20 border-b-[1px] border-black border-solid">
-            <div className="absolute top-6 left-6">
+        <nav className="fixed right-0 top-24 z-50 flex h-full w-72 flex-col border-l-[1px] border-solid border-black bg-white">
+          <div className="flex h-1/3 w-full flex-col items-center justify-start border-b-[1px] border-solid border-black py-20">
+            <div className="absolute left-6 top-6">
               <svg
                 width="21"
                 height="19"
@@ -173,7 +173,7 @@ const NavBar = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 onClick={() => {
-                  setShowAccountSidebar(false);
+                  setShowAccountSidebar(false)
                 }}
                 cursor="pointer"
               >
@@ -189,7 +189,7 @@ const NavBar = () => {
             />
             <h2 className="text-2xl font-medium">Kno Whiz</h2>
           </div>
-          <div className="flex flex-col justify-start items-center w-full h-2/3 py-16">
+          <div className="flex h-2/3 w-full flex-col items-center justify-start py-16">
             <a href="/" className="cursor-pointer text-2xl font-medium">
               Sign Out
             </a>
@@ -197,7 +197,7 @@ const NavBar = () => {
         </nav>
       )}
     </>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

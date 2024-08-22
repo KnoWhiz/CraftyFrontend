@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react'
 
 const Welcome = () => {
   return (
-    <div className="flex justify-center items-center pt-12 pb-24 mt-24 ml-48">
-      <div className="flex flex-col justify-center items-center h-1/3 w-1/2 gap-y-4 font-raleway">
-        <h1 className="text-title font-semibold text-center">
+    <div className="ml-48 mt-24 flex items-center justify-center pb-24 pt-12">
+      <div className="font-raleway flex h-1/3 w-1/2 flex-col items-center justify-center gap-y-4">
+        <h1 className="text-center text-title font-semibold">
           Crafty: Developer Documentation
         </h1>
 
@@ -14,7 +14,7 @@ const Welcome = () => {
         </h2>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Welcome;
+export default Welcome

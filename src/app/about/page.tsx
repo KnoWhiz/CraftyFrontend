@@ -1,5 +1,5 @@
-import About from "@/components/About Components/About";
-import NavBar from "@/components/NavBar";
+import About from '@/components/About Components/About'
+import NavBar from '@/components/NavBar'
 
 export default function Home() {
   return (
@@ -7,5 +7,5 @@ export default function Home() {
       <NavBar />
       <About />
     </div>
-  );
+  )
 }
