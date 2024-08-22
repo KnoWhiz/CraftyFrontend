@@ -2,7 +2,7 @@ import React from "react";
 
 const DocLabel = ({ label }: { label: string }) => {
   return (
-    <div className="bg-line-gray p-2 rounded-xl inline-block">
+    <div className="bg-line-gray p-2 rounded-xl inline-block text-xl">
       <p>{label}</p>
     </div>
   );

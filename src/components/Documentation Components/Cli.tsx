@@ -5,7 +5,7 @@ import DocLabel from "./DocLabel";
 const Cli = () => {
   return (
     <div id="cli" className="pl-60">
-      <div className="flex flex-col justify-center items-start h-1/3 w-5/6 gap-y-20 font-raleway">
+      <div className="flex flex-col justify-center items-start h-1/3 w-5/6 gap-y-20 font-raleway text-xl">
         <div className="text-main-black">
           <h1 className="text-3xl font-semibold">CLI Commands</h1>
           <p className="inline">Crafty provides 2 main commands: </p>
@@ -198,9 +198,9 @@ const Cli = () => {
           <p className="inline">Here&apos;s how to use each step:</p>
 
           <div className="flex flex-col w-full gap-y-2">
-            <h4 id="chapter" className="text-2xl">
+            <h3 id="chapter" className="text-2xl font-medium">
               Chapter
-            </h4>
+            </h3>
 
             <p className="inline">
               You should always start with chapter command to create meta data
@@ -218,9 +218,9 @@ const Cli = () => {
           </div>
 
           <div className="flex flex-col w-full gap-y-2">
-            <h4 id="section" className="text-2xl">
+            <h3 id="section" className="text-2xl font-medium">
               Section
-            </h4>
+            </h3>
             <p className="inline">
               Start from second step, you are going to provide the course_id
               instead of topic to continue using existing materials.
@@ -242,9 +242,9 @@ const Cli = () => {
           </div>
 
           <div className="flex flex-col w-full gap-y-2">
-            <h4 id="note" className="text-2xl">
+            <h3 id="note" className="text-2xl font-medium">
               Note
-            </h4>
+            </h3>
 
             <div>
               <p className="inline">
@@ -281,9 +281,22 @@ const Cli = () => {
                 <div>
                   <DocLabel label="--chapter" />
                   <p className="inline">
+                    {" "}
                     is the chapter index to generate notes for. The chapter
-                    number start from 0. Here is an example of notes generation
-                    for a course with 3 chapters
+                    number start from 0.
+                  </p>
+                </div>
+                <div>
+                  <a
+                    href="https://docs.google.com/document/d/1o3lqzV5muV5YKBJZ6uCeYkJYmbLT2eZ9t8c5KYcpABU/edit?usp=sharing"
+                    className="inline font-semibold text-[#0A66C2] underline"
+                  >
+                    Here
+                  </a>
+                  <p className="inline">
+                    {" "}
+                    is an example of notes generation for a course with 3
+                    chapters
                   </p>
                 </div>
               </div>
@@ -291,9 +304,9 @@ const Cli = () => {
           </div>
 
           <div className="flex flex-col w-full gap-y-2">
-            <h4 id="slide" className="text-2xl">
+            <h3 id="slide" className="text-2xl font-medium">
               Slide
-            </h4>
+            </h3>
 
             <div>
               <p className="inline">
@@ -330,9 +343,9 @@ const Cli = () => {
           </div>
 
           <div className="flex flex-col w-full gap-y-2">
-            <h4 id="script" className="text-2xl">
+            <h3 id="script" className="text-2xl font-medium">
               Script
-            </h4>
+            </h3>
 
             <div>
               <p className="inline">
@@ -350,9 +363,9 @@ const Cli = () => {
           </div>
 
           <div className="flex flex-col w-full gap-y-2">
-            <h4 id="voice" className="text-2xl">
+            <h3 id="voice" className="text-2xl font-medium">
               Voice
-            </h4>
+            </h3>
 
             <div>
               <p className="inline">
@@ -370,9 +383,9 @@ const Cli = () => {
           </div>
 
           <div className="flex flex-col w-full gap-y-2">
-            <h4 id="video" className="text-2xl">
+            <h3 id="video" className="text-2xl font-medium">
               Video
-            </h4>
+            </h3>
 
             <div>
               <p className="inline">

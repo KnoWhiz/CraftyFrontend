@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useEffect, useState } from "react";
+import TemplateSelectPopup from "./TemplateSelectPopup";
 
 interface TemplatesProps {
   onSelect: () => void;
@@ -8,10 +9,17 @@ interface TemplatesProps {
 
 const Templates: React.FC<TemplatesProps> = ({ onSelect }) => {
   const [selectedIndex, setSelectedIndex] = useState<number>(-1);
+  const [showIndex, setShowIndex] = useState<number>(-1);
+  const [showTemplatePopup, setShowTemplatePopup] = useState<boolean>(false);
 
   const handleSelectThumb = (index: number) => {
     setSelectedIndex(index);
     onSelect();
+  };
+
+  const handleOpenThumb = (index: number) => {
+    setShowIndex(index);
+    setShowTemplatePopup(true);
   };
 
   return (
@@ -29,7 +37,7 @@ const Templates: React.FC<TemplatesProps> = ({ onSelect }) => {
             className="relative drop-shadow-lg cursor-pointer"
             key={index}
             onClick={() => {
-              handleSelectThumb(index);
+              handleOpenThumb(index);
             }}
           >
             <img
@@ -46,6 +54,18 @@ const Templates: React.FC<TemplatesProps> = ({ onSelect }) => {
           </div>
         ))}
       </div>
+      {showTemplatePopup && (
+        <TemplateSelectPopup
+          onSelect={() => {
+            handleSelectThumb(showIndex);
+            setShowTemplatePopup(false);
+          }}
+          onClose={() => {
+            setShowTemplatePopup(false);
+          }}
+          template={`./assets/thumbnails/thumb-${showIndex + 1}.png`}
+        />
+      )}
     </div>
   );
 };

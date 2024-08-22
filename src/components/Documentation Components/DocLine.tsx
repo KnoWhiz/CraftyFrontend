@@ -11,10 +11,10 @@ const DocLine = ({ lines, label }: { lines: string[]; label: string }) => {
   ));
 
   return (
-    <div className="w-full">
+    <div className="w-full ">
       {label !== "" && <p className="text-main-black mb-4">{label}</p>}
       <div className="flex flex-col justify-start items-start bg-line-gray w-full">
-        <ul className="ml-4 my-4 ">{docLines}</ul>
+        <ul className="ml-4 my-4 text-xl">{docLines}</ul>
       </div>
     </div>
   );
