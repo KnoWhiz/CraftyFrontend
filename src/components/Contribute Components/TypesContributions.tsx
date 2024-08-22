@@ -2,7 +2,7 @@ import React from "react";
 
 const TypesContributions = () => {
   return (
-    <div className="font-raleway">
+    <div className="font-raleway w-full">
       <h1 className="text-3xl font-semibold mb-6">Types of Contributions</h1>
       <div className="flex flex-col gap-y-4">
         <div className="flex flex-col gap-y-1">

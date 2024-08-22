@@ -3,7 +3,7 @@ import DocLine from "../../Documentation Components/DocLine";
 
 const SubmittingContribution = () => {
   return (
-    <div>
+    <div className="w-full">
       <h3 className="text-[26px] font-semibold mb-6">
         Submitting Your Contribution
       </h3>

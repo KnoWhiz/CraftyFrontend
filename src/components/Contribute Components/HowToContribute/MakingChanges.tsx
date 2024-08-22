@@ -2,7 +2,7 @@ import React from "react";
 
 const MakingChanges = () => {
   return (
-    <div>
+    <div className="w-full">
       <h3 className="text-[26px] font-semibold mb-6">Making Changes</h3>
       <div className="flex flex-col items-start justify-start gap-y-0.5 pl-3 w-full">
         <div>

@@ -1,22 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
 import React, { useEffect, useState } from "react";
 
-const Templates = () => {
-  let [thumbStyle, setThumbStyle] = useState<string[]>([
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-  ]);
+interface TemplatesProps {
+  onSelect: () => void;
+}
 
-  const selectThumb = (index: number) => {
-    const thumbStyleTemp = new Array(thumbStyle.length).fill("");
-    thumbStyleTemp[index] = "border-[#175DCC] border-3 border-solid";
-    setThumbStyle(thumbStyleTemp);
+const Templates: React.FC<TemplatesProps> = ({ onSelect }) => {
+  const [selectedIndex, setSelectedIndex] = useState<number>(-1);
+
+  const handleSelectThumb = (index: number) => {
+    setSelectedIndex(index);
+    onSelect();
   };
 
   return (
@@ -29,16 +24,26 @@ const Templates = () => {
         </p>
       </div>
       <div className="flex flex-row justify-start gap-x-2 gap-y-8 flex-wrap">
-        {thumbStyle.map((style, index) => (
-          <img
-            src={`./assets/thumbnails/thumb-${index + 1}.png`}
-            alt={`template ${index + 1} thumbnail`}
-            className={`drop-shadow-lg cursor-pointer ${style}`}
+        {[...Array(8)].map((_, index) => (
+          <div
+            className="relative drop-shadow-lg cursor-pointer"
             key={index}
             onClick={() => {
-              selectThumb(index);
+              handleSelectThumb(index);
             }}
-          />
+          >
+            <img
+              src={`./assets/thumbnails/thumb-${index + 1}.png`}
+              alt={`template ${index + 1} thumbnail`}
+            />
+            <div
+              className={`absolute inset-0 ${
+                selectedIndex === index
+                  ? "border-[3px] border-[#175DCC] border-solid"
+                  : ""
+              }`}
+            ></div>
+          </div>
         ))}
       </div>
     </div>

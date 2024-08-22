@@ -3,7 +3,7 @@ import DocLine from "../../Documentation Components/DocLine";
 
 const GettingStarted = () => {
   return (
-    <div>
+    <div className="w-full">
       <h1 className="text-3xl font-semibold mb-6">How to Contribute</h1>
       <h3 className="text-[26px] font-semibold mb-6">Getting Started</h3>
       <div className="flex flex-col items-start justify-start gap-y-2 pl-3 w-full">

@@ -2,7 +2,7 @@ import React from "react";
 
 const Incentives = () => {
   return (
-    <div className="font-raleway">
+    <div className="font-raleway w-full">
       <h1 className="text-3xl font-semibold mb-4">
         Incentives for Contribution
       </h1>
