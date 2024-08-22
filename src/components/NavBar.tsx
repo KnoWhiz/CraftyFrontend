@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -34,6 +34,21 @@ const NavBar = () => {
   const router = useRouter();
   const pathname = usePathname();
   const [showAccountSidebar, setShowAccountSidebar] = useState<boolean>(false);
+  const navRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    function handleClick(event: MouseEvent) {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setShowAccountSidebar(false);
+      }
+    }
+
+    window.addEventListener("click", handleClick);
+
+    return () => {
+      window.removeEventListener("click", handleClick);
+    };
+  }, []);
 
   useEffect(() => {
     if (pathname.includes("/crafty")) {
@@ -83,7 +98,10 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="font-raleway text-xl fixed top-0 border-b-[1px] border-solid border-black flex flex-row h-24 w-full items-center justify-between bg-main-white text-main-black pl-20 pr-16">
+      <nav
+        ref={navRef}
+        className="font-raleway text-xl fixed top-0 border-b-[1px] border-solid border-black flex flex-row h-24 w-full items-center justify-between bg-main-white text-main-black pl-20 pr-16"
+      >
         <div className="flex gap-x-10">
           <NavBarItem
             name="Home"
@@ -172,7 +190,9 @@ const NavBar = () => {
             <h2 className="text-2xl font-medium">Kno Whiz</h2>
           </div>
           <div className="flex flex-col justify-start items-center w-full h-2/3 py-16">
-            <h2 className="text-2xl font-medium">Sign Out</h2>
+            <a href="/" className="cursor-pointer text-2xl font-medium">
+              Sign Out
+            </a>
           </div>
         </nav>
       )}

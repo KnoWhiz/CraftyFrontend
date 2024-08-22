@@ -4,7 +4,7 @@ import DocLabel from "./DocLabel";
 
 const Cli = () => {
   return (
-    <div id="cli" className="pl-60 py-24">
+    <div id="cli" className="pl-60">
       <div className="flex flex-col justify-center items-start h-1/3 w-5/6 gap-y-20 font-raleway">
         <div className="text-main-black">
           <h1 className="text-3xl font-semibold">CLI Commands</h1>
@@ -15,7 +15,10 @@ const Cli = () => {
         </div>
 
         <div className="flex flex-col w-full gap-y-6">
-          <h2 className="text-3xl text-main-green font-normal leading-tight">
+          <h2
+            id="create"
+            className="text-3xl text-main-green font-normal leading-tight"
+          >
             Create
           </h2>
 
@@ -151,7 +154,10 @@ const Cli = () => {
         </div>
 
         <div className="flex flex-col w-full gap-y-6">
-          <h2 className="text-3xl text-main-green font-normal leading-tight">
+          <h2
+            id="step"
+            className="text-3xl text-main-green font-normal leading-tight"
+          >
             Step
           </h2>
 
@@ -192,7 +198,9 @@ const Cli = () => {
           <p className="inline">Here&apos;s how to use each step:</p>
 
           <div className="flex flex-col w-full gap-y-2">
-            <h4 className="text-2xl">Chapter</h4>
+            <h4 id="chapter" className="text-2xl">
+              Chapter
+            </h4>
 
             <p className="inline">
               You should always start with chapter command to create meta data
@@ -210,7 +218,9 @@ const Cli = () => {
           </div>
 
           <div className="flex flex-col w-full gap-y-2">
-            <h4 className="text-2xl">Section</h4>
+            <h4 id="section" className="text-2xl">
+              Section
+            </h4>
             <p className="inline">
               Start from second step, you are going to provide the course_id
               instead of topic to continue using existing materials.
@@ -232,7 +242,9 @@ const Cli = () => {
           </div>
 
           <div className="flex flex-col w-full gap-y-2">
-            <h4 className="text-2xl">Note</h4>
+            <h4 id="note" className="text-2xl">
+              Note
+            </h4>
 
             <div>
               <p className="inline">
@@ -279,7 +291,9 @@ const Cli = () => {
           </div>
 
           <div className="flex flex-col w-full gap-y-2">
-            <h4 className="text-2xl">Slide</h4>
+            <h4 id="slide" className="text-2xl">
+              Slide
+            </h4>
 
             <div>
               <p className="inline">
@@ -316,7 +330,9 @@ const Cli = () => {
           </div>
 
           <div className="flex flex-col w-full gap-y-2">
-            <h4 className="text-2xl">Script</h4>
+            <h4 id="script" className="text-2xl">
+              Script
+            </h4>
 
             <div>
               <p className="inline">
@@ -334,7 +350,9 @@ const Cli = () => {
           </div>
 
           <div className="flex flex-col w-full gap-y-2">
-            <h4 className="text-2xl">Voice</h4>
+            <h4 id="voice" className="text-2xl">
+              Voice
+            </h4>
 
             <div>
               <p className="inline">
@@ -352,7 +370,9 @@ const Cli = () => {
           </div>
 
           <div className="flex flex-col w-full gap-y-2">
-            <h4 className="text-2xl">Video</h4>
+            <h4 id="video" className="text-2xl">
+              Video
+            </h4>
 
             <div>
               <p className="inline">
