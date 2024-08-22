@@ -3,7 +3,7 @@ import React from "react";
 
 const Demo = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-full gap-y-6 font-raleway">
+    <div className="flex flex-col justify-center items-center h-full gap-y-6 font-raleway pt-24">
       <h1 className="text-title font-bold">How it Works</h1>
 
       <iframe

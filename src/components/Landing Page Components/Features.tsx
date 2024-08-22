@@ -3,7 +3,7 @@ import React from "react";
 
 const Features = () => {
   return (
-    <div className="flex flex-col justify-start items-center gap-y-20 font-raleway">
+    <div className="flex flex-col justify-start items-center gap-y-20 font-raleway pt-24">
       <h1 className="text-title font-bold">Features</h1>
 
       <div className="grid grid-cols-2 grid-rows-4 gap-4 font-medium gap-y-20">
