@@ -70,7 +70,7 @@ const CraftyPage = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-row justify-between w-[95%]">
+        <div className="flex flex-row justify-between w-full">
           <Templates />
           <Parameters />
         </div>
