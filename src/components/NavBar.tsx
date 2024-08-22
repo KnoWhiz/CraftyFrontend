@@ -100,7 +100,7 @@ const NavBar = () => {
     <>
       <nav
         ref={navRef}
-        className="font-raleway text-xl fixed top-0 border-b-[1px] border-solid border-black flex flex-row h-24 w-full items-center justify-between bg-main-white text-main-black pl-20 pr-16"
+        className="z-50 font-raleway text-xl fixed top-0 border-b-[1px] border-solid border-black flex flex-row h-24 w-full items-center justify-between bg-main-white text-main-black pl-20 pr-16"
       >
         <div className="flex gap-x-10">
           <NavBarItem
@@ -163,7 +163,7 @@ const NavBar = () => {
         </div>
       </nav>
       {showAccountSidebar && (
-        <nav className="fixed z-20 h-full w-72 border-l-[1px] border-solid border-black bg-white top-24 right-0 flex flex-col">
+        <nav className="fixed z-50 h-full w-72 border-l-[1px] border-solid border-black bg-white top-24 right-0 flex flex-col">
           <div className="flex flex-col justify-start items-center w-full h-1/3 py-20 border-b-[1px] border-black border-solid">
             <div className="absolute top-6 left-6">
               <svg
