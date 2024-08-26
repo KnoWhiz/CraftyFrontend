@@ -2,11 +2,14 @@
 import React, { useState } from 'react'
 import InputField from '../Pricing Components/InputField'
 import RoundButton from '../RoundButton'
+import ConfirmationPopup from '../ConfirmationPopup'
 
 const Contact = () => {
   const [name, setName] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [message, setMessage] = useState<string>('')
+  const [showConfirmationPopup, setShowConfirmationPopup] =
+    useState<boolean>(false)
 
   const handleSubmit = () => {
     // Handle submit logic here
@@ -17,6 +20,8 @@ const Contact = () => {
     setName('')
     setEmail('')
     setMessage('')
+
+    setShowConfirmationPopup(true)
   }
 
   return (
@@ -49,6 +54,14 @@ const Contact = () => {
           <RoundButton click={handleSubmit} text={'Submit'} color={'blue'} />
         </div>
       </div>
+      {showConfirmationPopup && (
+        <ConfirmationPopup
+          onClose={() => {
+            setShowConfirmationPopup(false)
+          }}
+          text={'Message sent! We hope to get back to you soon!'}
+        />
+      )}
     </div>
   )
 }
