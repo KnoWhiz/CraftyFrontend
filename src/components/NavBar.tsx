@@ -40,12 +40,11 @@ const NavBar = () => {
   useEffect(() => {
     function handleClick(event: MouseEvent) {
       if (
-        (navRef.current && navRef.current.contains(event.target as Node)) ||
-        (sidebarRef.current &&
-          sidebarRef.current.contains(event.target as Node))
+        navRef.current &&
+        !navRef.current.contains(event.target as Node) &&
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target as Node)
       ) {
-        setShowAccountSidebar(true)
-      } else {
         setShowAccountSidebar(false)
       }
     }
