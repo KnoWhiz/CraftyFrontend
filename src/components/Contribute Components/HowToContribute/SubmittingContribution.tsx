@@ -20,7 +20,7 @@ const SubmittingContribution = () => {
         <DocLine
           lines={[
             'git add .',
-            'git commit -m &quot;Add feature: Your feature description&quot;',
+            'git commit -m "Add feature: Your feature description"',
           ]}
           label={''}
         />

@@ -27,7 +27,7 @@ const Parameter: React.FC<ParameterProps> = ({
           <div
             className="relative flex cursor-pointer flex-col gap-y-1"
             onClick={() => {
-              showDropdown ? setShowDropdown(false) : setShowDropdown(true)
+              setShowDropdown(!showDropdown)
             }}
           >
             <div className="relative flex h-10 w-24 items-center justify-center rounded-2xl border-2 border-black bg-main-white px-4 text-center text-xl">

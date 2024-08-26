@@ -35,10 +35,17 @@ const NavBar = () => {
   const pathname = usePathname()
   const [showAccountSidebar, setShowAccountSidebar] = useState<boolean>(false)
   const navRef = useRef<HTMLElement>(null)
+  const sidebarRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     function handleClick(event: MouseEvent) {
-      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+      if (
+        (navRef.current && navRef.current.contains(event.target as Node)) ||
+        (sidebarRef.current &&
+          sidebarRef.current.contains(event.target as Node))
+      ) {
+        setShowAccountSidebar(true)
+      } else {
         setShowAccountSidebar(false)
       }
     }
@@ -163,7 +170,10 @@ const NavBar = () => {
         </div>
       </nav>
       {showAccountSidebar && (
-        <nav className="fixed right-0 top-24 z-50 flex h-full w-72 flex-col border-l-[1px] border-solid border-black bg-white">
+        <nav
+          ref={sidebarRef}
+          className="fixed right-0 top-24 z-50 flex h-full w-72 flex-col border-l-[1px] border-solid border-black bg-white"
+        >
           <div className="flex h-1/3 w-full flex-col items-center justify-start border-b-[1px] border-solid border-black py-20">
             <div className="absolute left-6 top-6">
               <svg
