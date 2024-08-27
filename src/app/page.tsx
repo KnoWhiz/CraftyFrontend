@@ -36,7 +36,9 @@ export default function Home() {
   return (
     <div className="h-screen">
       <Introduction />
+      {/*
       <Demo />
+      */}
       <Features />
       <Contribute />
       <Footer />
