@@ -17,7 +17,7 @@ const Introduction = () => {
   return (
     <div className="font-raleway relative bg-gradient-to-b from-main-blue from-60% to-white to-0%">
       <div className="flex flex-col items-center justify-center">
-        <div className="mb-1 mt-48 flex flex-col items-center justify-center text-main-black">
+        <div className="mb-1 mt-48 flex max-w-[95%] flex-col items-center justify-center text-center text-main-black">
           <h1 className="text-title font-bold text-main-black">
             Craft Compelling Courses with Ease
           </h1>

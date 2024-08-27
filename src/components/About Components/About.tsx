@@ -3,8 +3,8 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className="flex items-center gap-x-20 px-24 pb-10 pt-40">
-      <div className="font-raleway flex w-1/2 flex-col items-baseline justify-start gap-y-6 leading-8">
+    <div className="flex flex-col items-center gap-x-20 gap-y-12 px-24 pb-10 pt-40 lg:flex-row">
+      <div className="font-raleway flex w-full flex-col items-baseline justify-start gap-y-6 leading-8 lg:w-1/2">
         <h1 className="mb-3 text-title font-bold">About Us</h1>
         <p className="text-xl">
           At Crafty, we believe that every educator deserves the tools to create

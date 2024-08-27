@@ -290,6 +290,7 @@ const Cli = () => {
                   <a
                     href="https://docs.google.com/document/d/1o3lqzV5muV5YKBJZ6uCeYkJYmbLT2eZ9t8c5KYcpABU/edit?usp=sharing"
                     className="inline font-semibold text-[#0A66C2] underline"
+                    target="_blank"
                   >
                     Here
                   </a>

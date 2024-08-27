@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import RoundButton from '../RoundButton'
 
 interface SignUpPopupProps {
@@ -9,6 +9,23 @@ interface SignUpPopupProps {
 }
 
 const SignUpPopup: React.FC<SignUpPopupProps> = ({ onSubmit, onClose }) => {
+  const [email, setEmail] = useState<string>('')
+  const [isValidEmail, setIsValidEmail] = useState<boolean>(false)
+
+  const handleOnChange = (email: string) => {
+    setEmail(email)
+
+    // don't remember from where i copied this code, but this works.
+    let re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+    if (re.test(email)) {
+      setIsValidEmail(true)
+    } else {
+      setIsValidEmail(false)
+    }
+  }
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
       <div className="font-raleway relative flex h-[26rem] w-[50rem] flex-col items-center justify-center gap-y-10 bg-white py-10">
@@ -38,8 +55,18 @@ const SignUpPopup: React.FC<SignUpPopupProps> = ({ onSubmit, onClose }) => {
           className="h-14 w-2/3 rounded-xl bg-main-gray px-6 text-xl font-light text-black placeholder:text-xl placeholder:font-light placeholder:text-black"
           placeholder="Email"
           type="email"
+          value={email}
+          onChange={(e) => {
+            handleOnChange(e.target.value)
+          }}
         />
-        <RoundButton text="Submit" color="green" click={onSubmit} />
+        <RoundButton
+          text="Submit"
+          color="green"
+          click={() => {
+            isValidEmail ? onSubmit() : {}
+          }}
+        />
       </div>
     </div>
   )

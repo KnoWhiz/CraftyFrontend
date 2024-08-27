@@ -115,12 +115,14 @@ const NavBar = () => {
             targetPage="home"
             currentPage={page}
           />
+          {/*
           <NavBarItem
             name="Crafty"
             handle={handleCrafty}
             targetPage="crafty"
             currentPage={page}
           />
+          */}
           <NavBarItem
             name="About Us"
             handle={handleAbout}
@@ -133,6 +135,7 @@ const NavBar = () => {
             targetPage="documentation"
             currentPage={page}
           />
+          {/*
           <NavBarItem
             name="Pricing"
             handle={handlePricing}
@@ -145,13 +148,13 @@ const NavBar = () => {
             targetPage="contact"
             currentPage={page}
           />
+          */}
         </div>
+        {/*
         <div
           className="cursor-pointer"
           onClick={() => {
-            showAccountSidebar
-              ? setShowAccountSidebar(false)
-              : setShowAccountSidebar(true)
+            setShowAccountSidebar(!showAccountSidebar)
           }}
         >
           <svg
@@ -167,6 +170,7 @@ const NavBar = () => {
             />
           </svg>
         </div>
+        */}
       </nav>
       {showAccountSidebar && (
         <nav

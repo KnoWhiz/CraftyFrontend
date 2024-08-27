@@ -8,9 +8,9 @@ const Footer = () => {
         <h1 className="mb-2 mt-4 text-3xl font-medium">Crafty</h1>
         <div className="flex flex-row items-center justify-center gap-x-8">
           <a href="/">Home</a>
-          <a href="/pricing">Pricing</a>
+          {/* <a href="/pricing">Pricing</a> */}
           <a href="/documentation">Documentation</a>
-          <a href="/contact">Contact</a>
+          {/* <a href="/contact">Contact</a> */}
           <a href="/about">About</a>
         </div>
         <p className="text-base font-normal">
@@ -39,12 +39,12 @@ const Footer = () => {
       <img
         src="assets/footer-rect-left.svg"
         alt="GitHub Logo"
-        className="absolute bottom-0 left-0 max-w-[40%]"
+        className="absolute bottom-0 left-0 max-w-[35%]"
       />
       <img
         src="assets/footer-rect-right.svg"
         alt="GitHub Logo"
-        className="absolute bottom-0 right-0 max-w-[40%]"
+        className="absolute bottom-0 right-0 max-w-[35%]"
       />
     </nav>
   )
