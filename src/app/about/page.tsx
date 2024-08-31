@@ -1,13 +1,9 @@
 'use client'
 
-import NavBar from '@/components/NavBar'
-import Footer from '@/components/Landing Page Components/Footer'
-import Features from '@/components/Landing Page Components/Features'
-import Contribute from '@/components/Landing Page Components/Contribute'
-import Introduction from '@/components/Landing Page Components/Introduction'
-import Demo from '@/components/Landing Page Components/Demo'
-import { useEffect, useState } from 'react'
+import About from '@/components/About Components/About'
 import MobileWarningMessage from '@/components/MobileWarningMessage'
+import NavBar from '@/components/NavBar'
+import { useState, useEffect } from 'react'
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState<boolean>(false)
@@ -32,17 +28,10 @@ export default function Home() {
   if (isMobile) {
     return <MobileWarningMessage />
   }
-
   return (
     <div className="h-screen">
-      <Introduction />
-      {/*
-      <Demo />
-      */}
-      <Features />
-      <Contribute />
-      <Footer />
       <NavBar />
+      <About />
     </div>
   )
 }
