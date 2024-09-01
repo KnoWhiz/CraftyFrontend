@@ -31,10 +31,12 @@ const Introduction = () => {
           alt="Placeholder"
           className="mb-16 mt-3 w-4/5"
         />
+        {/*
         <div className="flex flex-row items-center justify-center gap-x-6">
           <h1 className="text-3xl font-bold">Get early access today!</h1>
           <RoundButton text="Sign Up" color="blue" click={handleSignUp} />
         </div>
+        */}
       </div>
 
       {showPopup && (

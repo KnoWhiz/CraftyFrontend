@@ -57,16 +57,16 @@ const NavBar = () => {
   }, [])
 
   useEffect(() => {
-    if (pathname.includes('/crafty')) {
-      setPage('crafty')
-    } else if (pathname.includes('/about')) {
+    if (pathname?.includes('/about')) {
       setPage('about')
-    } else if (pathname.includes('/documentation')) {
+    } else if (pathname?.includes('/documentation')) {
       setPage('documentation')
-    } else if (pathname.includes('/pricing')) {
-      setPage('pricing')
-    } else if (pathname.includes('/contact')) {
-      setPage('contact')
+    } else if (pathname?.includes('/crafty')) {
+      // setPage('crafty')
+    } else if (pathname?.includes('/pricing')) {
+      // setPage('pricing')
+    } else if (pathname?.includes('/contact')) {
+      // setPage('contact')
     } else {
       setPage('home')
     }
